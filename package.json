@@ -1,4 +1,7 @@
 {
+  "name": "b-rate",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
 <<<<<<< Updated upstream
     "@supabase/supabase-js": "^2.39.6"
