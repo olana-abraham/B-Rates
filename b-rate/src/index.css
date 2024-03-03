@@ -13,8 +13,7 @@ body {
 
 .nav {
   padding:0 20px;
-  background-color: #1295cd;
-  color: white;
+  background-image: linear-gradient(lightgray, white);
   display: flex;
   align-items: stretch;
   justify-content: space-between;
@@ -46,11 +45,6 @@ body {
   display: flex;
   align-items: center;
   padding: .5rem
-}
-
-
-.nav li:hover {
-  background-color: rgb(182, 148, 0);
 }
 
   
