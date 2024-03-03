@@ -1,128 +1,148 @@
 @import url('https://font.goggleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300;400,700,900');
 
-.wrapper{
+.wrapper {
     width: 420px;
-    background: #1295cd;
-    color: white;
-    border-radius: 40px;
-    padding: 100px 40px;
-    margin: auto;
-    justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    background: white;
+    padding: 50px 40px;
+    margin-top: 40px;
+    margin-left: 80px;
+    margin-bottom: 40px;
+    border: 2px solid rgba(255, 255, 255, .2);
+}
 
+
+.image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    object-fit: cover;
 }
 
 
 
-.wrapper h1{
-    font-size:36px;
-    
+
+.wrapper h1 {
+    font-size: 36px;
+    color: black;
+
+}
+
+.wrapper h2 {
+    font-size: 14px;
+    color: black;
+
 }
 
 .wrapper .input-box {
-    position:relative;
-    width:100%;
+    position: relative;
     height: 50px;
     margin: 30px 0;
 }
 
 
- .input-box input{
+.input-box input {
 
-    width:100%;
-    height:100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    border: 2px solid rgba(255, 255, 255, .2);
-    border-radius: 40px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid lightgray;
+    border-radius: 10px;
     font-size: 16px;
-    color: white;
-    padding:20px 45px 20px 20px;
+    font-family: 'Raleway', sans-serif;
+
+    padding: 20px 45px 20px 20px;
 
 
-}
-
-.input-box input::placeholder{
-
-    color: white;
 
 }
 
-.input-box .icon{
-    position:absolute;
-    right:20px;
+
+
+.input-box input::placeholder {
+
+    color: black;
+
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 20px;
     top: 50%;
     transform: translateY(-50%);
-    font-size:16px;
+    font-size: 16px;
+    color: black;
 }
 
-.wrapper .remember-forgot{
+.wrapper .remember-forgot {
     display: flex;
     justify-content: space-between;
-    font-size:14.5px;
+    color: black;
+    font-size: 14.5px;
     margin: -15px 0 15px;
 }
 
-.remember-forgot label input{
-    accent-color: white;
+.remember-forgot label input {
+    accent-color: black;
     margin-right: 4px;
 }
 
-.remember-forgot a{
-    color: white;
-    text-decoration:none;
+.remember-forgot a {
+    color: black;
+    text-decoration: none;
 }
 
-.remember-forgot a:hover{
+.remember-forgot a:hover {
     text-decoration: underline;
 }
 
-.wrapper button{
+.wrapper button {
     width: 100%;
     height: 45px;
-    background: white;
+    background: black;
     border: none;
-    outline: none;
-    border-radius: 40px;
+    outline: black;
+    border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     cursor: pointer;
     font-size: 16px;
-    color: #333;
+    color: white;
     font-weight: 700;
 
 }
 
-.wrapper button:hover{
-    background-color: rgb(249, 222, 103);
-    
+.wrapper button:hover {
+    transform: rotate(0deg) skew(0deg) translate(0, -3px);
 }
 
-.wrapper .register-link{
+
+
+
+.wrapper .register-link {
     font-size: 14.5px;
-    text-align:center;
+    text-align: center;
     margin: 20px 0 15px;
+    color: black
 }
 
-.register-link p a{
-    color: white;
+.register-link p a {
+    color: black;
     text-decoration: none;
     font-weight: 600;
 
 }
 
-.register-link p a:hover{
+.register-link p a:hover {
     text-decoration: underline;
 }
 
-.wrapper{
-    font-family: 'Poppins', sans-serif;
+.wrapper {
+    font-family: 'Raleway', sans-serif;
+    font-style: bold;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing:grayscale;
+    -moz-osx-font-smoothing: grayscale;
     justify-content: center;
-    align-items:center;
-   
+    align-items: center;
+
 }
-
-

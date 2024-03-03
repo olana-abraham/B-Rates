@@ -1,6 +1,7 @@
 import React from 'react'
 import './login.css'
 import { FaUser, FaLock  } from "react-icons/fa";
+import myImage from './myImage.jpg';
 
 export default function Login() {
     
@@ -9,7 +10,8 @@ export default function Login() {
   
         <div className ='wrapper'>
             <form action ="">
-                <h1>Login</h1>
+                <h1>Welcome Back</h1>
+                <h2>Login to Leave Reviews</h2>
                 <div className="input-box">
                     <input type ="text" placeholder='Username' required />
                     <FaUser className='icon'/>
@@ -21,20 +23,31 @@ export default function Login() {
                 </div>
 
                 <div className="remember-forgot">
-                    <label><input type="checkbox" />Remember me </label>
-                    <a href="#">Forgot Passowrd?</a>
+                    <label><input type="checkbox" />Remember Me </label>
+                    <a href="">Forgot Password?</a>
                 </div>
 
-                <button type="submit">Login</button>
+                <button type="submit">Sign In</button>
                 <div className="register-link">
-                    <p>Don't have an account? <a href="#">Register</a></p>
+                    <p>Don't have an account? <a href="./register">Register</a></p>
 
                 </div>
 
             </form>
+            
+            <div >
+
+          <img src={myImage} alt="My Image" className='image' />
+            </div>            
         </div>
-        
-    )
+
+         
+         
+    )  
+    
+   
+           
+
 
 
 
