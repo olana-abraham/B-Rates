@@ -14,11 +14,11 @@ export default function Login() {
                 <h2>Login to Leave Reviews</h2>
                 <div className="input-box">
                     <input type ="text" placeholder='Username' required />
-                    <FaUser className='icon'/>
+                    <FaUser className='icon'/> 
                 </div>
                 <div className="input-box">
                     <input type="password" placeholder='Password' required/>
-                    <FaLock className='icon'/>
+                    <FaLock className='icon'/> 
 
                 </div>
 
