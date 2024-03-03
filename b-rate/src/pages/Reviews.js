@@ -1,4 +1,4 @@
-import {useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import supabase from "../config/supabaseClient"
 
@@ -14,29 +14,34 @@ const Reviews = () => {
   const [fetchError, setFetchError] = useState(null)
   const [reviews, setReviews] = useState(null)
 
-  const handleSelectChange = async (event) => {
-    setDining(event.target.value)
-  }
 
+  //useEffect(() => {
+  const fetchReviews = async () => {
+    const { data, error } = await supabase
+      .from('Reviews')
+      .select()
+      .eq('Dining', Dining);
+
+    if (error) {
+      setFetchError('Could not fetch the reviews')
+      setReviews(null)
+      console.log(error)
+    }
+    if (data) {
+      setReviews(data)
+    }
+  }
+  //fetchReviews()
+  //}, [])
 
   useEffect(() => {
-    const fetchReviews = async () => {
-        const {data, error} = await supabase
-        .from('Reviews')
-        .select()
-
-        if(error) {
-            setFetchError('Could not fetch the reviews')
-            setReviews(null)
-            console.log(error)
-        }
-        if(data) {
-            setReviews(data)
-        }
-    }
     fetchReviews()
-  }, [])
+  }, [Dining])
 
+  const handleSelectChange = async (event) => {
+    setDining(event.target.value)
+    fetchReviews()
+  }
 
 
   const handleSubmit = async (e) => {
@@ -46,13 +51,13 @@ const Reviews = () => {
       setFormError('Please fill in all the fields correctly.')
       return
     }
-   
+
     const { data, error } = await supabase
       .from('Reviews')
       .insert([{ rating, Dining, Review }])
-      setDining(null)
-      setRating('')
-      setReview('')
+    setDining(null)
+    setRating('')
+    setReview('')
 
     if (error) {
       console.log(error)
@@ -69,27 +74,27 @@ const Reviews = () => {
     <div className="page create">
       <form onSubmit={handleSubmit}>
         <label htmlFor="review">Review:</label>
-        <input 
-          type="text" 
+        <input
+          type="text"
           id="Review"
           value={Review}
           onChange={(e) => setReview(e.target.value)}
         />
 
         <select id="Foodspots" onChange={handleSelectChange}>
-                    <option value="">Select Dining</option>
-                    <option value="Epicuria">Epicuria</option>
-                    <option value="Feast">Feast</option>
-                    <option value="De Neve">De Neve</option>
-                    <option value="Bruin Cafe">Bruin Cafe</option>
-                    <option value="Bruin Plate">Bruin Plate</option>
-                    <option value="The Study">The Study</option>
-                    <option value="Cafe 1919">Cafe 1919</option>
-                    <option value="Epic at Ackerman">Epic at Ackerman</option>
-                </select>
+          <option value="">Select Dining</option>
+          <option value="Epicuria">Epicuria</option>
+          <option value="Feast">Feast</option>
+          <option value="De Neve">De Neve</option>
+          <option value="Bruin Cafe">Bruin Cafe</option>
+          <option value="Bruin Plate">Bruin Plate</option>
+          <option value="The Study">The Study</option>
+          <option value="Cafe 1919">Cafe 1919</option>
+          <option value="Epic at Ackerman">Epic at Ackerman</option>
+        </select>
 
         <label htmlFor="rating">Rating:</label>
-        <input 
+        <input
           type="number"
           id="rating"
           value={rating}
@@ -105,21 +110,21 @@ const Reviews = () => {
 
         {formError && <p className="error">{formError}</p>}
       </form>
-    
-    {fetchError && (<p>{fetchError}</p>)}
-    {reviews && (
+
+      {fetchError && (<p>{fetchError}</p>)}
+      {reviews && (
         <div className="reviews">
-            {reviews.map(Reviews => (
-                <p>{Reviews.Review} {Reviews.Dining} {"Rating:"+Reviews.rating}</p>
-            ))}
+          {reviews.map(Reviews => (
+            <p>{Reviews.Review} {Reviews.Dining} {"Rating:" + Reviews.rating}</p>
+          ))}
         </div>
-    )}
+      )}
 
 
     </div>
 
 
-    
+
   )
 }
 
