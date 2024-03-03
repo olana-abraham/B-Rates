@@ -3,6 +3,8 @@ import Navbar from "./Navbar"
 import Reviews from "./pages/Reviews"
 import Home from "./pages/Home"
 import Login from "./pages/Login"
+import Register from "./pages/register"
+
 import {Route, Routes} from "react-router-dom"
 
 function App() {
@@ -15,6 +17,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/reviews" element={<Reviews />} />
             <Route path ="/Login" element={<Login />} />
+            <Route path ="/Register" element={<Register />} />
           </Routes>
         </div>
       </>
