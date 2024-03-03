@@ -54,3 +54,65 @@ body {
 }
 
   
+.loginbutton:hover {
+
+
+  transform: rotate(0deg) skew(0deg) translate(0, -3px);
+
+}
+
+.register:hover {
+
+  transform: rotate(0deg) skew(0deg) translate(0, -3px);
+
+
+}
+
+.reviewbutton:hover {
+
+  transform: rotate(0deg) skew(0deg) translate(0, -3px);
+}
+
+
+.loginbutton {
+
+  background-color: transparent;
+  margin-top: 20px;
+  padding: 10px 10px;
+  font-size: 16px;
+  border-radius: 15px;
+  font-family: 'Raleway', sans-serif;
+  border-width: 1px;
+  border-color: black;
+  margin-bottom: 20px;
+
+}
+
+.register {
+
+  background-color: #1295cd;
+  margin-top: 20px;
+  margin-right: -80px;
+  padding: 10px 10px;
+  font-size: 16px;
+  border-radius: 15px;
+  font-family: 'Raleway', sans-serif;
+  border-width: 1px;
+  border-color: black;
+  margin-bottom: 20px;
+}
+
+.reviewbutton {
+
+  background-color: transparent;
+  margin-top: 20px;
+  padding: 10px 10px;
+  font-size: 14px;
+  border-radius: 15px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  border-color: transparent;
+  margin-bottom: 20px;
+
+
+}
