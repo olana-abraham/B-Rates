@@ -5,16 +5,14 @@ import { Fade } from 'react-slideshow-image';
 
 const slideImages = [
   {
-    url: 'https://uclaonthehill.files.wordpress.com/2015/04/ja1a0258.jpg?w=820&h=312&crop=1',
+    url: 'https://s3.amazonaws.com/cms.ipressroom.com/173/files/20193/5cafc8662cfac23fe70d8f68_Kerkoff+Patio_02/Kerkoff+Patio_02_15040f23-9790-43a8-b4a9-a1e57912e8a3-prv.jpg',
     caption: 'Welcome to B-Rate'
   },
   {
-    url: 'https://images.unsplash.com/photo-1506710507565-203b9f24669b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1536&q=80',
-    caption: 'Slide 2'
+    url: 'https://s3.amazonaws.com/cms.ipressroom.com/173/files/20193/5cafc40a2cfac23fe4039107_Court+of+Sciences_64/Court+of+Sciences_64_d5f3b649-45a1-497d-807b-f5b23ad4d8dd-prv.jpg'
   },
   {
-    url: 'https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
-    caption: 'Slide 3'
+    url: 'https://s3.amazonaws.com/cms.ipressroom.com/173/files/20125/52e70e0ef6091d782f0001e4__U7H2205/_U7H2205_15c046e1-fc61-4d9d-9df4-240e1827fae9-prv.jpg',
   }
 ];
 

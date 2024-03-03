@@ -1,4 +1,6 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
+import { IoIosSearch } from "react-icons/io";
+
 
 export default function Navbar() {
     return (
@@ -7,6 +9,9 @@ export default function Navbar() {
 
             <div className = 'search'>
                 <input type="text" placeholder='Search Here..'/>
+                <IoIosSearch className='icon'/>
+                
+
             </div>
 
             <ul>
