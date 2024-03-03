@@ -6,7 +6,6 @@ export default function Navbar() {
             <Link to="/" className="site-title">B-Rate</Link>
 
             <div className = 'search'>
-
                 <input type="text" placeholder='Search Here..'/>
             </div>
 
