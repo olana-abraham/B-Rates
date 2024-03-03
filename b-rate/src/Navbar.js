@@ -5,9 +5,9 @@ export default function Navbar() {
         <nav className="nav">
             <Link to="/" className="site-title">B-Rate</Link>
             <ul>
-                <CustomLink to ="/reviews">Reviews</CustomLink>
-                <CustomLink to="/Login">Login</CustomLink>
-                <CustomLink to="/Register">Register</CustomLink>
+            <button className="reviewbutton"><CustomLink to ="/Reviews">Reviews</CustomLink></button>
+              <button className = "loginbutton"> <CustomLink to="/Login">Login</CustomLink></button>
+              <button className = "register"> <CustomLink to="/register">Register</CustomLink></button>
             </ul>
         </nav>
     )
