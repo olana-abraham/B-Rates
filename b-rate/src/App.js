@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from "./Navbar"
 import Reviews from "./pages/Reviews"
 import Home from "./pages/Home"
 import Login from "./pages/Login"
@@ -10,7 +9,6 @@ function App() {
   let component
   return (
     <>
-      <Navbar />
       <div className="container">
         <Routes>
           <Route path="/" element={<Home />} />
