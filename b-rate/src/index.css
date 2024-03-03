@@ -15,7 +15,7 @@ body {
 }
 
 .nav {
-  background-image: linear-gradient(lightgray, white);
+  background-color: transparent;
   color: black;
   display: flex;
   align-items: stretch;
@@ -29,13 +29,35 @@ body {
 
 .site-title {
   font-size: 2rem;
-
-  margin-left: 100px;
+  margin-bottom: 20px;
+  margin-left: 50px;
   margin-top: 20px;
   margin-bottom: 20px;
   font-family: 'Raleway', sans-serif;
 
 }
+
+.search{
+display: flex;
+align-items: center;
+justify-content:center;
+margin-top: 20px;
+border-radius: 80px;
+margin-left: -200px;
+margin-right: -80px;
+margin-bottom: 20px;
+
+}
+
+.search input{
+    width: 400px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    padding: 10px 45px 10px 20px;
+}
+
 
 .nav ul {
   padding: 0;
