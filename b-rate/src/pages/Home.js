@@ -1,3 +1,12 @@
+import ImageSlider from '../ImageSlider';
+import '../home.css';
+
+
 export default function Home() {
-    return <h1>Home</h1>
+    return (
+        <div className='slider'>
+            <ImageSlider />
+        </div>
+    )
+
 }
