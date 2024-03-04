@@ -6,8 +6,7 @@ import myImage from './myImage.jpg';
 export default function Login() {
     
     return (
-    
-  
+        
         <div className ='wrapper'>
             <form action ="">
                 <h1>Welcome Back</h1>
@@ -25,7 +24,7 @@ export default function Login() {
                 <div className="remember-forgot">
                     <label><input type="checkbox" />Remember Me </label>
                     <a href="">Forgot Password?</a>
-                </div>
+        </div>
 
                 <button type="submit">Sign In</button>
                 <div className="register-link">

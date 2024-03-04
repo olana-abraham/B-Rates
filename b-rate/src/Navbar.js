@@ -6,14 +6,11 @@ export default function Navbar() {
     return (
         <nav className="nav">
             <Link to="/" className="site-title">B-Rate</Link>
-
-            <div className = 'search'>
+            <div className='search'>
                 <input type="text" placeholder='Search Here..'/>
-                <IoIosSearch className='icon'/>
-                
+                <button className ="searchclick"><IoIosSearch className='searchicon'/></button>
 
             </div>
-
             <ul>
             <button className="reviewbutton"><CustomLink to ="/Reviews">Reviews</CustomLink></button>
               <button className = "loginbutton"> <CustomLink to="/Login">Login</CustomLink></button>
