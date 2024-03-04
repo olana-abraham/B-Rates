@@ -7,12 +7,13 @@ export default function Navbar() {
     // Check if the current location matches the login or register page routes
     const isLoginPage = location.pathname === "/Login";
     const isRegisterPage = location.pathname === "/register";
+    const isForgotPage = location.pathname == "/forgot";
 
     return (
         <nav className="nav">
             <Link to="/" className="site-title">B-Rate</Link>
 
-            {!isLoginPage && !isRegisterPage && (
+            {!isLoginPage && !isRegisterPage && !isForgotPage &&(
                 <div className='search'>
                     <input type="text" placeholder='Search Here..' />
                     <button className = 'searchclick'><IoIosSearch className='searchicon' /></button>
