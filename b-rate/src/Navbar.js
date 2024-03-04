@@ -1,23 +1,28 @@
-import { Link, useMatch, useResolvedPath } from "react-router-dom"
+import { Link, useMatch, useResolvedPath, useLocation } from "react-router-dom";
 import { IoIosSearch } from "react-icons/io";
 
-
 export default function Navbar() {
+    const location = useLocation();
+
+    // Check if the current location matches the login or register page routes
+    const isLoginPage = location.pathname === "/Login";
+    const isRegisterPage = location.pathname === "/register";
+
     return (
         <nav className="nav">
             <Link to="/" className="site-title">B-Rate</Link>
 
-            <div className = 'search'>
-                <input type="text" placeholder='Search Here..'/>
-                <IoIosSearch className='icon'/>
-                
-
-            </div>
+            {!isLoginPage && !isRegisterPage && (
+                <div className='search'>
+                    <input type="text" placeholder='Search Here..' />
+                    <IoIosSearch className='icon' />
+                </div>
+            )}
 
             <ul>
-            <button className="reviewbutton"><CustomLink to ="/Reviews">Reviews</CustomLink></button>
-              <button className = "loginbutton"> <CustomLink to="/Login">Login</CustomLink></button>
-              <button className = "register"> <CustomLink to="/register">Register</CustomLink></button>
+                <button className="reviewbutton"><CustomLink to="/Reviews">Reviews</CustomLink></button>
+                <button className="loginbutton"> <CustomLink to="/Login">Login</CustomLink></button>
+                <button className="register"> <CustomLink to="/register">Register</CustomLink></button>
             </ul>
         </nav>
     )
