@@ -15,7 +15,7 @@ export default function Navbar() {
             {!isLoginPage && !isRegisterPage && (
                 <div className='search'>
                     <input type="text" placeholder='Search Here..' />
-                    <IoIosSearch className='icon' />
+                    <button className = 'searchclick'><IoIosSearch className='searchicon' /></button>
                 </div>
             )}
 

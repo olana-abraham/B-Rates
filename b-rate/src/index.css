@@ -52,26 +52,27 @@ margin-bottom: 20px;
 
 .search input{
     width: 400px;
-    border: 1px gray;
+
     border-radius: 2px;
     font-size: 16px;
     font-family: 'Raleway', sans-serif;
     padding: 10px 45px 10px 20px;
+    border-width: 1px;
+    border-color: gray;
 }
 
 .searchclick{
-
- 
   background-color: #1295cd;
   padding: 10px 15px 10px 15px;
+  border-width: 3px;
   border-color: transparent;
-
 }
 
 .searchicon{
   
-  color: white;
+color: white;
 cursor: pointer;
+font-size: 12px;
 }
 
 
@@ -98,36 +99,31 @@ cursor: pointer;
 
 
 .loginbutton:hover {
-
-
   transform: rotate(0deg) skew(0deg) translate(0, -3px);
-
 }
 
 .register:hover {
-
   transform: rotate(0deg) skew(0deg) translate(0, -3px);
-
-
 }
 
 .reviewbutton:hover {
-
   transform: rotate(0deg) skew(0deg) translate(0, -3px);
 }
 
 
 .loginbutton {
 
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.399);
   margin-top: 20px;
   padding: 10px 10px;
   font-size: 16px;
-  border-radius: 15px;
+  border-radius: 5px;
+  color:white;
   font-family: 'Raleway', sans-serif;
-  border-width: 1px;
-  border-color: black;
+  border-width: 3px;
+  border-color: white;
   margin-bottom: 20px;
+
 
 }
 
@@ -138,23 +134,26 @@ cursor: pointer;
   margin-right: -80px;
   padding: 10px 10px;
   font-size: 16px;
-  border-radius: 15px;
+  color:white;
+  border-radius: 5px;
   font-family: 'Raleway', sans-serif;
-  border-width: 1px;
-  border-color: black;
+  border-width: 3px;
+  border-color: transparent;
   margin-bottom: 20px;
 }
 
 .reviewbutton {
 
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.399);
   margin-top: 20px;
   padding: 10px 10px;
   font-size: 14px;
-  border-radius: 15px;
+  font-style: bold;
+  border-width: 3px;
+  border-color: white;
+  color: white;
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
-  border-color: transparent;
   margin-bottom: 20px;
 
 
