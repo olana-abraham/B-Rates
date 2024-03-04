@@ -1,6 +1,7 @@
 import React from 'react';
 import 'react-slideshow-image/dist/styles.css';
 import { Fade } from 'react-slideshow-image';
+import Navbar from "./Navbar"
 
 
 const slideImages = [
@@ -17,22 +18,27 @@ const slideImages = [
 ];
 
 function ImageSlider() {
-    return (
-        <div className='slide-container'>
-          <Fade>
-            {slideImages.map((image, index) => (
-              <div key={index} className='slide-image'>
-                <div className='image-container' style={{backgroundImage: `url(${image.url})`}}>
+  return (
+      <div className='slide-container'>
+        <Fade>
+          {slideImages.map((image, index) => (
+            <div key={index} className='slide-image'>
+              <div className='image-container' style={{backgroundImage: `url(${image.url})`}}>
+                <div className='Nav'>
+                  <Navbar />
+                </div>
+                {index === 0 && (
                   <div className='transparent-box'>
                     <span className='caption'>{image.caption}</span>
                   </div>
-                </div>
+                )}
               </div>
-            ))}
-          </Fade>
-        </div>
-      );
-    }
+            </div>
+          ))}
+        </Fade>
+      </div>
+  );
+}
   
 
 export default ImageSlider;

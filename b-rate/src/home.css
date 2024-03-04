@@ -7,11 +7,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 600px;
+    height: 700px;
     width: 100%;
     margin: 0;
     padding: 0;
     background-size: cover;
+  }
+
+  .Nav {
+    margin-bottom: 44rem;
+    color: white;
   }
   
   .transparent-box {
