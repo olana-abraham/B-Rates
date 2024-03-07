@@ -13,12 +13,13 @@
 
 
 .image {
-    position: absolute;
+    position: relative;
     top: 0;
     right: 0;
     width: 50%;
     height: 100vh;
     object-fit: cover;
+    overflow: hidden;
 }
 
 
@@ -63,7 +64,7 @@
 }
 
 .input-box .icon {
-    position: absolute;
+    position: relative;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
