@@ -4,7 +4,7 @@ import { FaUser, FaLock } from "react-icons/fa";
 import myImage from './myImage.jpg';
 import { useEffect, useState } from "react"
 import supabase from "../config/supabaseClient.js"
-
+import { Auth } from '@supabase/auth-ui-react'
 
 const Login = () => {
     const [email, setEmail] = useState('')
@@ -19,12 +19,16 @@ const Login = () => {
                 password: pass
             })
             if (error) throw error
+            
+            const { data: { user } } = await supabase.auth.getUser()
+            console.log(user.id)
             window.location("/")
         }
         catch (error) {
             alert(error)
         }
     }
+    
 
     return (
 
