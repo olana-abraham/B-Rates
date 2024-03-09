@@ -1,0 +1,23 @@
+.blue-button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* Add hover effect */
+  .blue-button:hover {
+    background-color: darkblue;
+  }
+
+  label:hover > .star {
+    color: rgb(145, 145, 62);
+  }
+  .select-container {
+    margin-right: 85px;
+  }
+  .textarea-container {
+    margin-top: 100px; /* Adjust the value as needed */
+  }
