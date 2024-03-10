@@ -5,4 +5,15 @@
     position: relative;
     bottom: 0;
     width: 100%;
+    font-size: smaller;
+    height: 100%;
+}
+
+.test {
+    text-decoration: none;
+    color: white;
+}
+
+.test:hover {
+    text-decoration: underline;
 }
