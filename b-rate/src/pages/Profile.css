@@ -1,0 +1,14 @@
+.profile-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.profile-info {
+    width: 50%;
+}
+
+.profile-about {
+    width: 50%;
+}
+
