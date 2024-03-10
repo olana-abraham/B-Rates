@@ -13,19 +13,20 @@ export default function Favorite(){
 
                 <div className="button-row">
                     {buttonNamesRow1.map((name, index) => (
-                        <button key={index} className="button">{name}</button>
+                        <button key={index} className="dining-option"><a href='./Profile'>{name}</a></button>
                             ))}
                 </div>
 
+
                 <div className="button-row">
                     {buttonNamesRow2.map((name, index) => (
-                        <button key={index} className="button">{name}</button>
+                        <button key={index} className="dining-option"><a href='./Profile'>{name}</a></button>
                             ))}
                 </div>
 
                 <div className="button-row">
                     {buttonNamesRow3.map((name, index) => (
-                        <button key={index} className="button">{name}</button>
+                        <button key={index} className="dining-option"><a href='./Profile'>{name}</a></button>
                             ))}
                 </div>
             </div>

@@ -5,6 +5,7 @@ import Login from "./pages/Login"
 import Register from "./pages/register"
 import Name from "./pages/Account_Info_1"
 import Favorite from "./pages/Account_Info_2"
+import Profile from "./pages/Profile"
 import { Route, Routes } from "react-router-dom"
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/Register" element={<Register />} />
           <Route path="/Account_Info_1" element={<Name />} />
           <Route path="/Account_Info_2" element={<Favorite />} />
+          <Route path="/Profile" element={<Profile />} />
         </Routes>
       </div>
     </>
