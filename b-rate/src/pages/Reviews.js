@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import supabase from "../config/supabaseClient"
+
+import Navbar from "../Navbar"
+
 import './Reviews.css'
 //import StarRate from "../pages/starRate.js"
 import {FaStar} from "react-icons/fa"
+
 
 const Reviews = () => {
   const navigate = useNavigate()
@@ -209,8 +213,21 @@ const Reviews = () => {
   return (
     
     <div className="page create">
+
+      <Navbar />
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="review">Review:</label>
+        <input
+          type="text"
+          id="Review"
+          value={Review}
+          onChange={(e) => setReview(e.target.value)}
+        />
+
+
        <select id="Foodspots" onChange={handleSelectChange} className="select-container">
           <option value=''>Select Dining</option>
+
           <option value="Epicuria">Epicuria</option>
           <option value="Feast">Feast</option>
           <option value="De Neve">De Neve</option>

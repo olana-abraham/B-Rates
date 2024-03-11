@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: rgb(255, 255, 255);
+  color: white;
 }
 
 .App-link {
@@ -32,8 +32,25 @@
   from {
     transform: rotate(0deg);
   }
-
   to {
     transform: rotate(360deg);
   }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 10vh;
+}
+.content-wrap {
+  flex: 1;
+}
+
+.container {
+  width: 100%; /* Example container width */
+}
+
+.fluid-content {
+  width: 100%; /* Example fluid content width */
+  margin: 0; /* Center the content horizontally */
 }

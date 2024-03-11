@@ -1,5 +1,6 @@
 import React from 'react';
 import './Register.css';
+
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import supabase from "../config/supabaseClient.js"
@@ -54,6 +55,7 @@ const Register = () => {
                 <button type="submit" >Register</button>
             </form>
         </div>
+
     )
 }
 

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300;400,700,900');
+
 .slide-container {
     position: relative;
   }
@@ -7,11 +9,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 600px;
+    height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
     background-size: cover;
+  }
+
+  .Nav {
+    margin-bottom: 44rem;
+    color: white;
   }
   
   .transparent-box {
@@ -28,4 +35,108 @@
     font-size: 75px;
     color: #fff;
   }
+
+
+  .outerhome{
+   display: flex;
+   justify-content: space-between;
+   margin-top: 10px;
+   margin-bottom: 100px;
+  }
+
+
+  .left{
+    width: 100%;
+    margin-left: -350px;
+
+ 
+  }
+
+.left img{
+  position: relative;
+  height: 500px;
+  width: 100%;
+  transform:scale(.7);
+  margin-left: 250px;
+}
+
+  .right{
+    width: 60%;
+    background-color: white;
+    text-align: left;
+    margin-left: 100px;
+    font-family: Lato;
+    margin-top: 50px;
+    margin-right: 100px;
+
+    
+    
+  }
+
+  .homebutton1{
+    width: 150px;
+    height: 45px;
+    background: #1295cd;
+    border: none;
+    outline: black;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-weight: 300;
+    margin-top: 40px;
+    margin-right:10px;
   
+  }
+     .homebutton2 {
+       width: 150px;
+       height: 45px;
+       background: #1295cd;
+       border: none;
+       outline: black;
+       border-radius: 20px;
+       cursor: pointer;
+       font-size: 16px;
+       color: white;
+       font-weight: 300;
+       margin-left: 20px;
+       margin-top: 40px;  
+     }
+
+  .homebutton1:hover{
+    transform: rotate(0deg) skew(0deg) translate(0, -3px);
+  }
+
+  .homebutton2:hover{
+    transform: rotate(0deg) skew(0deg) translate(0, -3px);
+
+  }
+
+
+  .right h1{
+    font:normal bold 50px Lato;
+    margin-bottom: 1px;
+  }
+
+  .right h2{
+    
+    font: normal bold 20px Lato;
+    color: gray;
+
+  }
+
+ 
+
+  .right p{
+    margin-top: 40px;
+    font: normal 20px Lato;
+
+  }
+
+ .active{
+  text-decoration: none;
+ }
+
+ li.active::marker{
+  display: none;
+ }
