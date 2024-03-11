@@ -34,18 +34,6 @@ body {
   margin-left: 50px;
   font-family: 'Raleway', sans-serif;
  position: relative;
-
-
-
-}
-
-.search {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    margin-right: 50px;
-    margin-top: 20px;
-    font-family: 'Raleway', sans-serif;
-
 }
 
 .nav ul {
@@ -109,3 +97,38 @@ body {
   font-size: 20px;
   margin-bottom: 20px;
 }
+
+.search {
+  background: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.submit {
+  font-size: 2rem;
+  cursor: pointer;
+  color: black;
+  background: none;
+  border: none;
+}
+
+.search-txt {
+  width: 0;
+  font-size: 26px;
+  border: none;
+  background: transparent;
+  outline: none;
+  transition: .25s;
+}
+
+
+.active .search-txt{
+  width:350px;
+  padding: 0 10px;
+}
+
+
+
+
+
