@@ -1,5 +1,9 @@
 import { Link, useMatch, useResolvedPath, useLocation } from "react-router-dom";
-import { IoIosSearch } from "react-icons/io";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { FaSearch } from "react-icons/fa";
+import logo from '/Users/deanali/Desktop/CS/CS35L/CS35L Project/B-Rates-3/b-rate/src/b-rate-logo.png';
+
+
 
 export default function Navbar() {
     const location = useLocation();
@@ -11,20 +15,22 @@ export default function Navbar() {
 
     return (
         <nav className="nav">
-            <Link to="/" className="site-title">B-Rate</Link>
+            <Link to="/" className="site-title"><GiHamburgerMenu /></Link>
 
             {!isLoginPage && !isRegisterPage && !isForgotPage &&(
-                <div className='search'>
-                    <input type="text" placeholder='Search Here..' />
-                    <button className = 'searchclick'><IoIosSearch className='searchicon' /></button>
-                </div>
-            )}
-
-            <ul>
-                <button className="reviewbutton"><CustomLink to="/Reviews">Reviews</CustomLink></button>
-                <button className="loginbutton"> <CustomLink to="/Login">Login</CustomLink></button>
-                <button className="register"> <CustomLink to="/register">Register</CustomLink></button>
+            <ul className = "mainlinks">
+                
+                <CustomLink to="/" className="home">Home </CustomLink>
+                <CustomLink to="/Reviews" className="reviews"> Reviews </CustomLink>
+                <CustomLink to="/" className="logo"><img src={logo} alt="homelogo" className='logo' /></CustomLink>
+                <CustomLink to="/Login" className="login">Login</CustomLink>
+                <CustomLink to="/register" className="register">Register</CustomLink>
+                
             </ul>
+            )}
+                
+                <Link to="/" className="search"><FaSearch /></Link>
+
         </nav>
     )
 }

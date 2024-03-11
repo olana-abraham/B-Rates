@@ -1,5 +1,5 @@
 @import url('https://font.goggleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Raleway:300;400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Lato:300;400,700,900');
 
 
 
@@ -20,62 +20,33 @@ body {
   background-color: transparent;
   color: black;
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  font-size: 1.05rem;
+  font-size: 20px;
   padding: 0 1rem;
-  font-family: Verdana, sans-serif;
+  font-family:Lato;
 }
+
 
 .site-title {
   font-size: 2rem;
-  margin-bottom: 20px;
   margin-left: 50px;
-  margin-top: 20px;
-  margin-bottom: 20px;
   font-family: 'Raleway', sans-serif;
+ position: relative;
 
-}
-
-.search{
-display: flex;
-align-items: center;
-justify-content:center;
-margin-top: 20px;
-margin-left: -200px;
-margin-right: -80px;
-margin-bottom: 20px;
 
 
 }
 
-.search input{
-    width: 400px;
-
-    border-radius: 2px;
-    font-size: 16px;
+.search {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    margin-top: 20px;
     font-family: 'Raleway', sans-serif;
-    padding: 10px 45px 10px 20px;
-    border-width: 1px;
-    border-color: gray;
+
 }
-
-.searchclick{
-  background-color: #1295cd;
-  padding: 10px 15px 10px 15px;
-  border-width: 3px;
-  border-color: transparent;
-}
-
-.searchicon{
-  
-color: white;
-cursor: pointer;
-font-size: 12px;
-}
-
-
 
 .nav ul {
   padding: 0;
@@ -84,6 +55,11 @@ font-size: 12px;
   display: flex;
   gap: 2rem;
   margin-right: 100px;
+  margin:auto;
+      list-style-type: none;
+      align-items: center;
+
+
 }
 
 .nav a {
@@ -92,69 +68,41 @@ font-size: 12px;
   height: 100%;
   display: flex;
   align-items: center;
-  padding: .5rem
+  padding: .5rem;
 }
 
+.home:hover {
+  text-decoration: underline;
+  text-decoration-color: #1295cd;
+  text-decoration-thickness: 3px;
+}
 
+.reviews:hover {
+  text-decoration: underline;
+  text-decoration-color: #1295cd;
+  text-decoration-thickness: 3px;
+}
 
-
-.loginbutton:hover {
-  transform: rotate(0deg) skew(0deg) translate(0, -3px);
+.login:hover {
+  text-decoration: underline;
+  text-decoration-color: #1295cd;
+  text-decoration-thickness: 3px;
 }
 
 .register:hover {
-  transform: rotate(0deg) skew(0deg) translate(0, -3px);
+  text-decoration: underline;
+  text-decoration-color: #1295cd;
+  text-decoration-thickness: 3px;
 }
 
-.reviewbutton:hover {
-  transform: rotate(0deg) skew(0deg) translate(0, -3px);
+.logo{
+  transform:scale(.7);
 }
 
 
-.loginbutton {
-
-  background-color: rgba(0, 0, 0, 0.399);
-  margin-top: 20px;
-  padding: 10px 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  color:white;
-  font-family: 'Raleway', sans-serif;
-  border-width: 3px;
-  border-color: white;
-  margin-bottom: 20px;
 
 
-}
-
-.register {
-
-  background-color: #1295cd;
-  margin-top: 20px;
-  margin-right: -80px;
-  padding: 10px 10px;
-  font-size: 16px;
-  color:white;
-  border-radius: 5px;
-  font-family: 'Raleway', sans-serif;
-  border-width: 3px;
-  border-color: transparent;
-  margin-bottom: 20px;
-}
-
-.reviewbutton {
-
-  background-color: rgba(0, 0, 0, 0.399);
-  margin-top: 20px;
-  padding: 10px 10px;
-  font-size: 14px;
-  font-style: bold;
-  border-width: 3px;
-  border-color: white;
-  color: white;
-  font-family: 'Raleway', sans-serif;
-  font-size: 20px;
-  margin-bottom: 20px;
 
 
-}
+
+
