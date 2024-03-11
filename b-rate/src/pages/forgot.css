@@ -1,27 +1,23 @@
 @import url('https://font.goggleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Raleway:300;400,700,900');
 
 .wrapper {
     width: 420px;
     background: white;
     padding: 50px 40px;
-    margin-top: 40px;
-    margin-left: 80px;
+    margin-top: -5px;
+    margin-left: 125px;
     margin-bottom: 40px;
-    border: 2px solid rgba(182, 25, 25, 0.2);
-    font: normal normal 300 22px/33px Poligon;
+    border: 2px solid rgba(255, 255, 255, .2);
 }
 
 
-
 .image {
-    position: relative;
+    position: absolute;
     top: 0;
     right: 0;
     width: 50%;
     height: 100vh;
     object-fit: cover;
-    overflow: hidden;
 }
 
 
@@ -54,7 +50,11 @@
     border-radius: 10px;
     font-size: 16px;
     font-family: 'Raleway', sans-serif;
+
     padding: 20px 45px 20px 20px;
+
+
+
 }
 
 
@@ -66,7 +66,7 @@
 }
 
 .input-box .icon {
-    position: relative;
+    position: absolute;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
@@ -116,8 +116,6 @@
 }
 
 
-
-
 .wrapper .register-link {
     font-size: 14.5px;
     text-align: center;
@@ -143,5 +141,6 @@
     -moz-osx-font-smoothing: grayscale;
     justify-content: center;
     align-items: center;
+
 
 }
