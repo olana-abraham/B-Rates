@@ -1,0 +1,47 @@
+.next-button {
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+
+    padding: 20px 60px;
+    background-color: #1295cd;
+    font-size: 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+
+  .next-button a{
+    text-decoration: none;
+    color:white;
+  }
+
+.next-button:hover {
+    transform: rotate(0deg) skew(0deg) translate(0, -3px);
+}
+
+.name-box input {
+    width: 20%;
+    height: 100%;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    padding: 20px 45px 20px 10px;
+}
+
+.name-wrapper {
+    margin-top: 125px;
+
+    font-family: 'Raleway', sans-serif;
+    font-style: bold;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+  

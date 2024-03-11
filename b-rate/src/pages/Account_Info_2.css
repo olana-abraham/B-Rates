@@ -1,0 +1,33 @@
+.dining-option {
+    margin-right: 20px;
+    margin-top: 20px;
+    padding: 20px 20px 20px 20px;
+    background-color: #1295cd;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.dining-option:hover {
+    transform: rotate(0deg) skew(0deg) translate(0, -3px);
+}
+
+.favorite-wrapper{
+    margin-top: 200px;
+    font-family: 'Raleway', sans-serif;
+    font-style: bold;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    justify-content: center;
+    align-items: center;
+}
+
+.dining-option a {
+    text-decoration: none;
+    color:white;
+}
+
+
+
