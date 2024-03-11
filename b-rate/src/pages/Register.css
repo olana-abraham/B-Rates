@@ -108,12 +108,21 @@
     font-size: 16px;
     color: white;
     font-weight: 700;
+    
 
 }
+
+
 
 .wrapper button:hover {
     transform: rotate(0deg) skew(0deg) translate(0, -3px);
 }
+
+.wrapper button a {
+    text-decoration: none;
+    color:white;
+}
+
 
 
 .wrapper .register-link {

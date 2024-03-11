@@ -1,14 +1,55 @@
-.profile-wrapper {
-    display: flex;
-    justify-content: space-between;
+:root {
+    --text1: hsl(150 100% 8%);
+    --text2: hsl(150 10% 60%);
+    --bkg1: hsl(189, 100%, 92%);
+    --bkg2: hsl(0, 0%, 100%);
+    --accent2: #1295cd;
+    --accent1: hsla(180, 92%, 58%, 0.6);
+    --gradient: linear-gradient(to right, var(--accent1), var(--accent2));
+  }
+
+  .name-year { 
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 100px;
+    margin-top: 50px;
+  }
+
+  .profile-container {
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--bkg2);
+    border-radius: .5rem;
+    position: relative;
+    text-align: center;
     margin-top: 10px;
-}
+    margin-left: 425px;
+    margin-right: 425px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  
+  .profile-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: .5rem;
+    background: var(--gradient);
+    z-index: -1;
+    transform: translate(4.5%, 5.5%) scale(.94);
+    filter: blur(10px);
+    opacity: .5;
+  }
 
-.profile-info {
-    width: 50%;
-}
-
-.profile-about {
-    width: 50%;
-}
-
+  .review-header {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem 2rem 0;
+  }
+  
+  .review-header h2 {
+    font-size: clamp(1.3rem, 0.34545462rem + 4.363636vw, 2.8rem);
+    z-index: 0;
+    margin: auto;
+  }
+  
