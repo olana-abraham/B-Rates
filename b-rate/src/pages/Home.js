@@ -7,9 +7,6 @@ export default function Home() {
         <div className='slider'>
             <ImageSlider />
         </div>
-
-
-
     )
 
 }
