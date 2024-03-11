@@ -18,7 +18,6 @@ export default function Navbar() {
             <button className="reviewbutton"><CustomLink to ="/Reviews">Reviews</CustomLink></button>
               <button className = "loginbutton"> <CustomLink to="/Login">Login</CustomLink></button>
               <button className = "register"> <CustomLink to="/register">Register</CustomLink></button>
-              <button className = "Edit Profile"> <CustomLink to="/Account_Info_1">Edit Profile</CustomLink></button>
             </ul>
         </nav>
     )

@@ -28,7 +28,7 @@ export default function Register() {
                     <input type="password" placeholder='Confirm Password' required />
                     <FaLock className='icon'/>
                 </div>
-                <button type="submit" >Register</button>
+                <button type="submit" ><a href='./Account_Info_1'>Register</a></button>
             </form>
              <div >
 
