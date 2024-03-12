@@ -1,5 +1,5 @@
 .blue-button {
-    background-color: blue;
+    background-color: #1295cd;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -9,7 +9,7 @@
   
   /* Add hover effect */
   .blue-button:hover {
-    background-color: darkblue;
+    background-color:#35b2e7;
   }
 
   label:hover > .star {
@@ -20,4 +20,11 @@
   }
   .textarea-container {
     margin-top: 100px; /* Adjust the value as needed */
+  }
+
+  .select-container{
+    border-radius: 50px;
+    border-width: 2px;
+    border-color: black;
+
   }
