@@ -31,8 +31,8 @@ const Login = () => {
     }
 
     return (
-
-
+        <div>
+        <Navbar />
         <div className='wrapper'>
             <form onSubmit={handleSubmit}>
                 <h1>Welcome Back</h1>
@@ -65,7 +65,7 @@ const Login = () => {
                 <img src={myImage} alt="My Image" className='image' />
             </div>
         </div>
- 
+        </div>
 
 
 

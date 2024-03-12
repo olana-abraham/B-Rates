@@ -3,6 +3,7 @@ import './Register.css';
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import supabase from "../config/supabaseClient.js"
+import myImage from './myImage.jpg';
 
 const Register = () => {
     const [email, setEmail] = useState('')
@@ -39,6 +40,9 @@ const Register = () => {
     }
 
     return (
+        <div>
+
+        <Navbar />
         <div className='wrapper'>
             <form onSubmit={handleSubmit}>
                 <h1>Register</h1>
@@ -59,6 +63,11 @@ const Register = () => {
                 </div>
                 <button type="submit" ><a onClick={handleSubmit}>Register</a></button>
             </form>
+            <div >
+
+            <img src={myImage} alt="My Image" className='image' />
+            </div>
+        </div>
         </div>
     )
 }
