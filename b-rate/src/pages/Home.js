@@ -4,6 +4,9 @@ import Navbar from "../Navbar";
 import homeImage from '../inforgraphicb-rates.png';
 import React, { useState, useEffect } from 'react';
 import supabase from "../config/supabaseClient"
+import { useNavigate } from "react-router-dom"
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -38,15 +41,16 @@ export default function Home() {
             <h1>Welcome To B-Rates</h1>
             <h2>Explore campus dining like never before with our community-driven ratings!</h2>
            <p>"Welcome to B-Rate, your ultimate destination for exploring and reviewing the diverse dining options available at UCLA! Whether you're a food enthusiast, a health-conscious eater, or simply looking for the best dining hall experience, we've got you covered."</p>
-          <a href="./Reviews"><button className = "homebutton1">Read Reviews</button></a>
+          <Link to="./Reviews" ><button className = "homebutton1">Read Reviews</button></Link>
             {!user &&(
-                <a href="./Login"><button className = "homebutton2">Login</button></a> 
+                 <Link to="./Login" ><button className = "homebutton2">Login</button></Link>
             )}
             {user &&(
-                <a href="./"><button className = "homebutton2">Profile</button></a> 
+                <Link to="./"> <button className = "homebutton2">Profile</button></Link>
             )}
             </div>
 
+                
 
 
 

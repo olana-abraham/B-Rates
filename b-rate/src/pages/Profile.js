@@ -1,6 +1,9 @@
 import React from 'react'
 import './Profile.css'
 import Navbar from "../Navbar"
+import { useNavigate } from "react-router-dom"
+import { Link } from 'react-router-dom';
+
 
 import { useLocation } from 'react-router-dom';
 

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import supabase from "../config/supabaseClient.js"
 import myImage from './myImage.jpg';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
     const [email, setEmail] = useState('')

@@ -34,9 +34,12 @@ return(
 
             </form>
         </div>
-            <button className="next-button"><a href='./Account_Info_2'>Next</a></button>
+          <Link to="/account_info_2" > <button className="next-button">Next</button>  </Link>
+            
     </div>
     )
+
+   
 }
 
 
