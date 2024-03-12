@@ -53,3 +53,12 @@
     margin: auto;
   }
   
+  .edit-save {
+    background-color: #1295cd;
+    padding-top: 4px;
+    padding-bottom: 3px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }

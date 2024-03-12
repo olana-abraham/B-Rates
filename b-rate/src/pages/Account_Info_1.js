@@ -16,18 +16,25 @@ return(
 
                 <h1>Let's get to know you.</h1>
 
-                <h2>Enter first and last name</h2>
+                <br/>
+
+                <h2 className='h2-info2'>Enter first and last name</h2>
 
                 <div className="name-box">
                     <input required type="text" placeholder='First Name' />
                 </div>
 
-                <h2>Enter graduation year</h2>
+                <br/>
+
+                <h2 className='h2-info2'>Enter graduation year</h2>
 
                 <div className="name-box">
                     <input required type="text" placeholder='Graduation Year' />
                 </div>
-                <h2>Enter a short biography</h2>
+
+                <br/>
+                
+                <h2 className='h2-info2'>Enter a short biography</h2>
                 <div className="name-box">
                     <input required type="text" placeholder='User Bio' />
                 </div>
