@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom"
 import supabase from "../config/supabaseClient.js"
 import myImage from './myImage.jpg';
 import { Link } from 'react-router-dom';
+import { FaUser, FaLock } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 const Register = () => {
     const [email, setEmail] = useState('')
@@ -44,18 +46,22 @@ const Register = () => {
                 <h1>Register</h1>
                 <div className="input-box">
                     <input type="text" placeholder='Username' onChange={(e) => setUsername(e.target.value)} required />
+                     <FaUser className='icon' />
                 </div>
                 <div className="input-box">
                     <input type="text" placeholder='Email'
                         onChange={(e) => setEmail(e.target.value)} required />
+                        <MdEmail className='icon'/>
                 </div>
                 <div className="input-box">
                     <input type="password" placeholder='Create Password' 
                         onChange={(e) => setPass1(e.target.value)} required />
+                        <FaLock className='icon' />
                 </div>
                 <div className="input-box">
                     <input type="password" placeholder='Confirm Password'
                         onChange={(e) => setPass2(e.target.value)} required />
+                        <FaLock className='icon' />
                 </div>
                 <Link to="/account_info_1" ><button type="submit">Register</button></Link>
            

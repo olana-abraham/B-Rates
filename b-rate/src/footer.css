@@ -4,9 +4,11 @@
     padding-top: 3rem;
     position: relative;
     bottom: 0;
+    left:0;
     width: 100%;
     font-size: smaller;
     height: 100%;
+  
 }
 
 .test {

@@ -67,9 +67,6 @@ const Reviews = () => {
       }
     }
 
-    
-    // const id = data.map(reviews => reviews.UID);
-    // setotherUIDs(id)
   }
 
   // const fixShit = async () => {
