@@ -215,14 +215,7 @@ const Reviews = () => {
     <div className="page create">
 
       <Navbar />
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="review">Review:</label>
-        <input
-          type="text"
-          id="Review"
-          value={Review}
-          onChange={(e) => setReview(e.target.value)}
-        />
+      
 
 
        <select id="Foodspots" onChange={handleSelectChange} className="select-container">
@@ -255,7 +248,7 @@ const Reviews = () => {
 
         
       
-      <form onSubmit={handleSubmit}/>
+      <form onSubmit={handleSubmit}>
       <label htmlFor="review">Review:</label>
         <textarea
           id="Review"
