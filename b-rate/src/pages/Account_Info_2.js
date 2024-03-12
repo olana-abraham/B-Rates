@@ -1,5 +1,8 @@
 import React from 'react'
 import './Account_Info_2.css'
+import { useNavigate } from "react-router-dom"
+import { Link } from 'react-router-dom';
+
 
 export default function Favorite(){
     const buttonNamesRow1 = ['Bruin Cafe', 'Cafe Plate', 'Cafe 1919'];
@@ -32,5 +35,7 @@ export default function Favorite(){
             </div>
 
         </div>
+
+         
     )
 }

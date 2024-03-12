@@ -5,6 +5,7 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import supabase from "../config/supabaseClient.js"
 import myImage from './myImage.jpg';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
     const [email, setEmail] = useState('')
@@ -56,7 +57,8 @@ const Register = () => {
                     <input type="password" placeholder='Confirm Password'
                         onChange={(e) => setPass2(e.target.value)} required />
                 </div>
-                <button type="submit" ><a href='./Account_Info_1'>Register</a></button>
+                <Link to="/account_info_1" ><button type="submit">Register</button></Link>
+           
             </form>
             <div >
 

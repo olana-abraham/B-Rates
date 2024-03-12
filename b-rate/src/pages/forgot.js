@@ -4,6 +4,9 @@ import { FaUser, FaLock } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import myImage from './myImage.jpg';
 import Navbar from "../Navbar";
+import { useNavigate } from "react-router-dom"
+import { Link } from 'react-router-dom';
+
 
 export default function Forgot() {
     return(
