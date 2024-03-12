@@ -2,7 +2,7 @@ import React from 'react'
 import './login.css'
 import { FaUser, FaLock } from "react-icons/fa";
 import myImage from './myImage.jpg';
-
+import Navbar from '../Navbar.js';
 import { useEffect, useState } from "react"
 import supabase from "../config/supabaseClient.js"
 import { useNavigate } from "react-router-dom"
@@ -33,8 +33,8 @@ const Login = () => {
     
 
     return (
-
-
+        <div>
+        <Navbar />
         <div className='wrapper'>
             <form onSubmit={handleSubmit}>
                 <h1>Welcome Back</h1>
@@ -67,7 +67,7 @@ const Login = () => {
                 <img src={myImage} alt="My Image" className='image' />
             </div>
         </div>
- 
+        </div>
 
 
 

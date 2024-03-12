@@ -255,7 +255,7 @@ const Reviews = () => {
 
         
       
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}/>
       <label htmlFor="review">Review:</label>
         <textarea
           id="Review"
