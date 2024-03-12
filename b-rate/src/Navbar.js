@@ -30,13 +30,28 @@ export default function Navbar() {
       };
 
      useEffect(() => {
-        const searchBox = document.getElementById("search-bar");
-        const icon = document.getElementsByClassName("submit")[0];
-        icon.onclick=function(){
-            searchBox.classList.toggle("active");
-        }
-    }, []); 
+    const searchBox = document.getElementById("search-bar");
+    const logo = document.getElementsByClassName("submit")[0];
+    
+    
+    const showSearchBar = () => {
+        searchBox.classList.add("active");
+    };
 
+    const hideSearchBar = () => {
+        searchBox.classList.remove("active");
+    };
+
+    logo.addEventListener("mouseover", showSearchBar);
+    searchBox.addEventListener("mouseover", showSearchBar);
+    searchBox.addEventListener("mouseout", hideSearchBar);
+
+    return () => {
+        logo.removeEventListener("mouseover", showSearchBar);
+        searchBox.removeEventListener("mouseover", showSearchBar);
+        searchBox.removeEventListener("mouseout", hideSearchBar);
+    };
+}, []);
     return (
         <nav className="nav">
             <Link to="/" className="site-title"><GiHamburgerMenu /></Link>
