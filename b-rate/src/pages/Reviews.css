@@ -5,6 +5,9 @@
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 10px;
+    
   }
   
   /* Add hover effect */
@@ -12,19 +15,62 @@
     background-color:#35b2e7;
   }
 
-  label:hover > .star {
-    color: rgb(145, 145, 62);
-  }
-  .select-container {
-    margin-right: 85px;
-  }
+
+
   .textarea-container {
     margin-top: 100px; /* Adjust the value as needed */
   }
 
   .select-container{
     border-radius: 50px;
-    border-width: 2px;
+    border-width: 1px;
     border-color: black;
+    text-align: center;
+    color:white;
+    background-color: #1295cd;
+    margin: 10px;
+    font-family: 'Raleway', sans-serif;
+    padding-left: 10px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+  }
+
+  .reviewtag{
+        font-family: 'Raleway', sans-serif;
+        margin:10px;
+        font-size: 18px;
 
   }
+
+  .textarea{
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    font-family: 'Raleway', sans-serif;
+  
+  }
+
+  .reviewoutput{
+  
+    background-color: rgb(241, 241, 241);
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: black;
+      margin: 10px;
+      font-family: 'Raleway', sans-serif;
+
+  }
+
+  .reviewsside{
+    width:48%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .outputside{
+    width:100%;
+
+  }
+
+  
