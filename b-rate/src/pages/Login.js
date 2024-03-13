@@ -63,11 +63,12 @@ const Login = () => {
 
             </form>
 
-            <div >
+            
+        </div>
+        <div >
 
                 <img src={myImage} alt="My Image" className='image' />
             </div>
-        </div>
         </div>
 
 

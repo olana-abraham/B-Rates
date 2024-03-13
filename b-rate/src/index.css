@@ -43,9 +43,8 @@ body {
   display: flex;
   gap: 2rem;
   margin-right: 100px;
-  margin:auto;
-      list-style-type: none;
-      align-items: center;
+  list-style-type: none;
+  align-items: center;
 
 
 }
