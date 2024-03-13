@@ -22,8 +22,9 @@ const Login = () => {
                 email: email,
                 password: pass
             })
+            var location = window.location;
             if (error) throw error
-            navigate("/")
+            location.replace("/");
 
         }
         catch (error) {
