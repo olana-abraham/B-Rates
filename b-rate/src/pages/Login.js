@@ -29,7 +29,6 @@ const Login = () => {
             alert(error)
         }
     }
-    
 
     return (
 

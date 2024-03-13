@@ -199,9 +199,7 @@ const Reviews = () => {
     // const userID = user.id;
     // console.log(user.id)
     // setUID(userID)
-    
-
-  
+      
     fetchReviews();
    // fetchUser();
   }
@@ -236,8 +234,6 @@ const Reviews = () => {
           <option value="newesttop">Newest to Oldest</option>
         </select>
 
-        
-      
       <form onSubmit={handleSubmit}>
       <label htmlFor="review">Review:</label>
         <textarea
@@ -302,6 +298,7 @@ const Reviews = () => {
     </div>
   )
 }
+
 
 export default Reviews
 
