@@ -19,11 +19,10 @@ const Login = () => {
                 email: email,
                 password: pass
             })
+            var location = window.location;
             if (error) throw error
-            
-            const { data: { user } } = await supabase.auth.getUser()
-            console.log(user.id)
-            window.location("/")
+            location.replace("/");
+
         }
         catch (error) {
             alert(error)
