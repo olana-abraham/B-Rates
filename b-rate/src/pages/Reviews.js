@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import supabase from "../config/supabaseClient"
 import './Reviews.css'
-//import StarRate from "../pages/starRate.js"
 import {FaStar} from "react-icons/fa"
 
 const Reviews = () => {
@@ -16,13 +15,10 @@ const Reviews = () => {
   const [reviews, setReviews] = useState(null)
   const [rating, setRating] = useState()
   const [UID, setUID] = useState('')
-  //const [Name, setName] = useState('')
   const [otherUID, setotherUID] = useState('')
   const [ratingShown, setratingShown] = useState('')
   const [ordering, setOrdering] = useState(true)
-  //const [otherUIDs, setotherUIDs] = useState('')
 
-  //useEffect(() => {
   const fetchReviews = async () => {
     if(ratingShown =="-1" || ratingShown == '')
     {
@@ -65,55 +61,20 @@ const Reviews = () => {
 
   }
 
-  // const fixShit = async () => {
-  //   otherUIDs.forEach(id => {
-  //     setotherUID(id)
-  //     fetchUser()
-
-  //   })
-
-  // }
-
-  // const fetchUser  = async () => {
-
-    
-  //   const {data, error} = await supabase
-  //     .from('Users')
-  //     .select('Name')
-  //     .eq('UID', otherUID)
-    
-  //     if(data)
-  //     {
-  //       setName(data)
-  //     }
-  // }
-  // const fetchUser = async() => {
-    
-
-  // }
-  //fetchReviews()
-  //}, [])
+  
 
   useEffect(() => {
     fetchReviews();
 }, [Dining, ratingShown, ordering]);
 
 
-  // useEffect(() => {
-  //   if (otherUID) {
-  //     fetchUser(); // Fetch user data when otherUID changes
-  //   }
-  // }, [otherUID]);
-
   const handleSelectChange = async (event) => {
     setDining(event.target.value)    
-    //console.log(Dining)
-    //fetchReviews()
+  
   }
   const handleSelectChange2 = async (event) => {
     setratingShown(parseInt(event.target.value))    
-    //console.log(Dining)
-    //fetchReviews()
+ 
   }
   const handleSelectChange3 = async (event) => {
     if(event.target.value=="oldesttop")
@@ -121,21 +82,10 @@ const Reviews = () => {
       setOrdering(true)    
     }
     else setOrdering(false)
-    //console.log(Dining)
-    //fetchReviews()
+  
   }
-  // async function fix(input)
-  // {
-  //   const {data, error} = await supabase
-  //     .from('Users')
-  //     .select('Name')
-  //     .eq('UID', input)
-    
-  //   const name = data && data.length > 0 ? data[0].Name : '';
-  //   return name;
-    
-  // }
-
+  
+  
   const handleSubmit = async (e) => {
     e.preventDefault()
 
@@ -143,16 +93,12 @@ const Reviews = () => {
       setFormError('Please fill in all the fields correctly.')
       return
     }
-    //const { data: user } = await supabase.auth.getUser();
     
     const { data: { user } } = await supabase.auth.getUser()
     console.log(user.id)
     
     setUID(user.id)
-    //console.log(user.id)
-    // const { data1, error1 } = await supabase
-    //   .from('Users')
-    //   .insert([{UID, rating, Dining, Review}])
+   
     
 
     const { data, error } = await supabase
@@ -161,7 +107,6 @@ const Reviews = () => {
     .eq('UID', user.id);
   
     const Name = data && data.length > 0 ? data[0].Name : '';
-      //console.log(UID+ " " + Name)
     if(true)
     {
       const { data, error } = await supabase
@@ -180,14 +125,11 @@ const Reviews = () => {
         setFormError('Please fill in all the fields correctly.')
       }
       if (data) {
-        //console.log(data)
         setFormError("")
-       // navigate('/')
       }
       
     }
-      //fetchReviews()
-    //setDining(null)
+   
     setRating('')
     setReview('')
     setFormError("")
@@ -198,11 +140,16 @@ const Reviews = () => {
     // setUID(userID)
       
     fetchReviews();
-   // fetchUser();
   }
 
+
+
+//Frontend below
+
   return (
-    
+    <div>
+         <Navbar />
+  <div className = 'reviewsside'>
     <div className="page create">
        <select id="Foodspots" onChange={handleSelectChange} className="select-container">
           <option value=''>Select Dining</option>
@@ -226,61 +173,56 @@ const Reviews = () => {
         </select>
 
         <select id="Time" onChange={handleSelectChange3} className="select-container">
-          {/* <option value="Time">Time</option> */}
+          {}
           <option value="oldesttop">Oldest to Newest</option>
           <option value="newesttop">Newest to Oldest</option>
         </select>
 
       <form onSubmit={handleSubmit}>
-      <label htmlFor="review">Review:</label>
+      <label htmlFor="review" className="reviewtag">REVIEWS</label>
         <textarea
+          className="textarea"
           id="Review"
           value = {Review}
           onChange={(e) => setReview(e.target.value)}
-          rows={5}
-          cols={50}
+          rows={6}
+          cols={80}
         />
-        {/* <label htmlFor="review">Review:</label>
-        <input
-          type="text"
-          id="Review"
-          value={Review}
-          onChange={(e) => setReview(e.target.value)}
-        /> */}
+        {}
 
        
 
         <StarRate setParentRating={setRating} />
-        {/* <label htmlFor="rating">Rating:</label>
-        <input
-          type="number"
-          id="rating"
-          value={rating}
-          
-          //onChange={(e) => setRating(e.target.value)}
-        /> */}
+        {}
 
         <button className="blue-button" type="submit">Post Review</button>
-        {/* <button onClick={() => { 
-    setReview("");
-    setDining("");
-    setRating("")
-}}>Submit Review</button> */}
+        { 
+    }
 
         {formError && <p className="error">{formError}</p>}
       </form>
       
       {fetchError && (<p>{fetchError}</p>)}
-      { reviews && (
-  <div>
+    
+
+     
+      
+      {}
+
+    </div>
+
+  </div>
+    { reviews && (
+  <div className="outputside">
   {reviews.map((review, index) => (
     <textarea
+    className="reviewoutput"
       key={index}
       value={`${review.Name} ${review.created_at ? review.created_at.substring(0, 10) + ' ' + review.created_at.substring(11, 16) : ''} \nRating: ${review.rating || ''} \n${review.Review || ''}`}
-      // Add created_at if needed
-      rows={3} // Set the number of rows as per your requirement
-      cols={35} // Set the number of columns as per your requirement
-      readOnly // Make the textarea read-only
+     
+      rows={6} 
+      cols={80} 
+      readOnly 
     />
   ))}
 </div>
@@ -314,16 +256,17 @@ function StarRate({ setParentRating }) {
   const handleStarHover = (hoveredRate) => {
     setHoverRating(hoveredRate);
   };
-
-  return (
+  
+return (
     <>
       {[...Array(5)].map((star, index) => {
         const currentRate = index + 1;
         return (
           <label key={index} style={{ cursor: 'pointer', marginRight: '0px' }} onClick={() => handleRatingClick(currentRate)} onMouseEnter={() => handleStarHover(currentRate)} 
           onMouseLeave={() => setHoverRating(null)}>
-            <input type="radio" name="rate" value={currentRate} style={{ display: 'none' }} />
+            <input type="radio"  name="rate" value={currentRate} style={{ display: 'none' }} />
             <FaStar
+            className="starrate"
               key={index}
               size={30}
               color={currentRate <= (hoverRating || rating) ? 'coral' : 'rgb(145, 100, 62)'}
@@ -334,40 +277,6 @@ function StarRate({ setParentRating }) {
     </>
   );
 }
-// function StarRate({setParentRating}) {
-//   const [rating, setRating] = useState(null)
-//   const [rateColor, setColor] = useState(null)
-//   useEffect(() => { 
-//     setParentRating(rating);
-//   }, [rating, setParentRating]);
-//   return (
-//       <>
-//           {[...Array(5)].map((star, index) => {
-//               const currentRate = index + 1
-//               return (
-//                   <>
-//                       <label>
-//                       <input type="radio" name="rate"
-//                       value = {currentRate}
-//                       onClick = {() => setRating(currentRate)}
-//                       />
-//                       <FaStar size={35}
-//                       color={currentRate <= (rateColor || rating) ? "yellow" : "grey" }
-//                        />
-//                       </label>
-//                   </>
-//               )
-//           })}
-//       </>
-//   )
-// }
 
-// {reviews && (
-//   <div className="reviews">
-//     <textarea
-//     {reviews.map(Reviews => (
-//       <p>{Reviews.Review} {Reviews.Dining} {"Rating:" + Reviews.rating}</p>
-//     ))}
-//     />
-//   </div>
-// )}
+
+
