@@ -63,7 +63,10 @@ const Register = () => {
                         onChange={(e) => setPass2(e.target.value)} required />
                         <FaLock className='icon' />
                 </div>
-                <Link to="/account_info_1" ><button type="submit">Register</button></Link>
+
+                {/*If we want to link the register button to the survey, then uncomment the link portion of code*/}
+                
+                {/*<Link to="/account_info_1" >*/}<button type="submit">Register</button>{/*</Link>*/}
            
             </form>
             <div >
