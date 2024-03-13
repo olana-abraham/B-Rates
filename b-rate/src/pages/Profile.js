@@ -8,22 +8,7 @@ import { useLocation } from 'react-router-dom';
 export default function Profile(){
     const location = useLocation();
     const otherUser = location.state && location.state.otherUser;
-
-    // const registerUser = async () => {
-    //     const { data: { user } } = await supabase.auth.getUser()
-    //     const{data: {user}} = await supabase.auth
-    //     const { data, error } = await supabase
-    //     .from('Users')
-    //     .insert([
-    //       { 
-    //           UID: user.id,
-    //           Dining: Dining,
-    //           Review: Review,
-    //           UID: user.id,
-    //           Name: Name,
-    //       }
-    //   ]);
-    // }
+  
     //console.log(otherUser)
     
 
