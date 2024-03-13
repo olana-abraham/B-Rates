@@ -25,9 +25,9 @@ const Register = () => {
                 email: email,
                 password: pass1,
                 options: {
-                    data: { username: username
-                     }
-                }
+                    data: { username: username }
+                },
+                redirectTo: "http://localhost:3000/account_info_1"
             })
             if (error) throw error
             alert("Check your email for verification link")
