@@ -24,6 +24,7 @@
     margin-top: 10px;
     margin-left: 425px;
     margin-right: 425px;
+    margin-bottom: 100px;
     padding-top: 100px;
     padding-bottom: 100px;
   }
@@ -53,3 +54,12 @@
     margin: auto;
   }
   
+  .edit-save {
+    background-color: #1295cd;
+    padding-top: 4px;
+    padding-bottom: 3px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }

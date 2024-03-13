@@ -1,12 +1,15 @@
 .main-footer{
     color:white;
     background-color: #1295cd;
-    padding-top: 3rem;
+    padding-top: 1rem;
     position: relative;
     bottom: 0;
+    left:0;
     width: 100%;
+    height:100%;
     font-size: smaller;
-    height: 100%;
+    font-family: 'Raleway', sans-serif;
+    
 }
 
 .test {
