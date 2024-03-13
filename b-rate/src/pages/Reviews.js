@@ -203,9 +203,7 @@ const Reviews = () => {
     // const userID = user.id;
     // console.log(user.id)
     // setUID(userID)
-    
-
-  
+      
     fetchReviews();
    // fetchUser();
   }
@@ -215,16 +213,6 @@ const Reviews = () => {
     <div className="page create">
 
       <Navbar />
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="review">Review:</label>
-        <input
-          type="text"
-          id="Review"
-          value={Review}
-          onChange={(e) => setReview(e.target.value)}
-        />
-
-
        <select id="Foodspots" onChange={handleSelectChange} className="select-container">
           <option value=''>Select Dining</option>
 
@@ -253,8 +241,6 @@ const Reviews = () => {
           <option value="newesttop">Newest to Oldest</option>
         </select>
 
-        
-      
       <form onSubmit={handleSubmit}>
       <label htmlFor="review">Review:</label>
         <textarea
@@ -319,6 +305,7 @@ const Reviews = () => {
     </div>
   )
 }
+
 
 export default Reviews
 

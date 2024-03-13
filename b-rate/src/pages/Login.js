@@ -13,8 +13,6 @@ const Login = () => {
     const [pass, setPass] = useState('')
     const navigate = useNavigate()
     
-
-
     async function handleSubmit(e) {
         e.preventDefault()
         try {
@@ -24,13 +22,11 @@ const Login = () => {
             })
             if (error) throw error
             navigate("/")
-
         }
         catch (error) {
             alert(error)
         }
     }
-    
 
     return (
 

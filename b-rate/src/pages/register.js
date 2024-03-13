@@ -10,7 +10,7 @@ const Register = () => {
     const [username, setUsername] = useState('')
     const [pass1, setPass1] = useState('')
     const [pass2, setPass2] = useState('')
-
+    const navigate = useNavigate()
 
     async function handleSubmit(e) {
         e.preventDefault()
@@ -22,7 +22,8 @@ const Register = () => {
                 email: email,
                 password: pass1,
                 options: {
-                    data: { username: username }
+                    data: { username: username
+                     }
                 }
             })
             if (error) throw error
@@ -30,6 +31,11 @@ const Register = () => {
         }
         catch (error) {
             alert(error)
+        }
+
+        const handleSubmit = async (e) => {
+            e.preventDefault()
+            navigate("/Account_Info_1", { state: { username: username, email:email, password:pass1 } }) 
         }
     }
 
@@ -52,7 +58,7 @@ const Register = () => {
                     <input type="password" placeholder='Confirm Password'
                         onChange={(e) => setPass2(e.target.value)} required />
                 </div>
-                <button type="submit" ><a href='./Account_Info_1'>Register</a></button>
+                <button type="submit" ><a onClick={handleSubmit}>Register</a></button>
             </form>
         </div>
 

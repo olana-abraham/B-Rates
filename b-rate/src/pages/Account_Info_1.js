@@ -1,7 +1,14 @@
 import React from 'react'
 import './Account_Info_1.css'
+import { useLocation } from 'react-router-dom';
 
 export default function Name(){
+    const location = useLocation();
+    const username = location.state && location.state.username;
+    const email = location.state && location.state.email;
+    const passwrd = location.state && location.state.password;
+    console.log(username)
+
 return( 
     <div>
         <div className="name-wrapper">
