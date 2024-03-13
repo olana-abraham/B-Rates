@@ -95,7 +95,6 @@ export default function Navbar() {
                 <ul className="mainlinks">
                     <CustomLink to="/" className="home">Home </CustomLink>
                     <CustomLink to="/Reviews" className="reviews"> Reviews </CustomLink>
-                    <CustomLink to="/" className="logo"><img src={logo} alt="homelogo" className='logo' /></CustomLink>
                     <CustomLink to="/Login" className="login">Login</CustomLink>
                     <CustomLink to="/register" className="register">Register</CustomLink>
                 </ul>
@@ -107,7 +106,7 @@ export default function Navbar() {
                     <CustomLink to="/" className="home">Home </CustomLink>
                     <CustomLink to="/Reviews" className="reviews"> Reviews </CustomLink>
                     <CustomLink to="/" className="logo"><img src={logo} alt="homelogo" className='logo' /></CustomLink>
-                    <CustomLink to="/profile" className="profile">Profile</CustomLink>
+                    <CustomLink to="/" className="profile">Profile</CustomLink>
                     <CustomLink onClick={HandleSignOut} className="register">Sign Out</CustomLink>
                 </ul>
             );
@@ -116,7 +115,8 @@ export default function Navbar() {
 
     return (
         <nav className="nav">
-            <Link to="/" className="site-title"><GiHamburgerMenu /></Link>
+            <Link to="/" className="logo"><img src={logo} alt="homelogo" className='logo' /></Link>
+
 
             <Nav />
             <body>
