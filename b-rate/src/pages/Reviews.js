@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import supabase from "../config/supabaseClient"
-
 import Navbar from "../Navbar"
+import { Link } from 'react-router-dom';
 
 import './Reviews.css'
 //import StarRate from "../pages/starRate.js"
@@ -67,9 +67,6 @@ const Reviews = () => {
       }
     }
 
-    
-    // const id = data.map(reviews => reviews.UID);
-    // setotherUIDs(id)
   }
 
   // const fixShit = async () => {

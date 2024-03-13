@@ -1,5 +1,8 @@
 import React from 'react'
 import './Account_Info_1.css'
+import { useNavigate } from "react-router-dom"
+import { Link } from 'react-router-dom';
+
 
 export default function Name(){
 return( 
@@ -27,9 +30,12 @@ return(
 
             </form>
         </div>
-            <button className="next-button"><a href='./Account_Info_2'>Next</a></button>
+          <Link to="/account_info_2" > <button className="next-button">Next</button>  </Link>
+            
     </div>
     )
+
+   
 }
 
 

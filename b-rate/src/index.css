@@ -104,11 +104,12 @@ body {
 
 .search-txt {
   width: 0;
-  font-size: 26px;
+  font-size: 20px;
   border: none;
   background: transparent;
   outline: none;
   transition: .25s;
+    font-family: 'Raleway', sans-serif;
 }
 
 
