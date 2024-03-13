@@ -105,7 +105,6 @@ export default function Navbar() {
                 <ul className="mainlinks">
                     <CustomLink to="/" className="home">Home </CustomLink>
                     <CustomLink to="/Reviews" className="reviews"> Reviews </CustomLink>
-                    <CustomLink to="/" className="logo"><img src={logo} alt="homelogo" className='logo' /></CustomLink>
                     <CustomLink to="/" className="profile">Profile</CustomLink>
                     <CustomLink onClick={HandleSignOut} className="register">Sign Out</CustomLink>
                 </ul>
