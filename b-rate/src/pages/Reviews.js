@@ -140,11 +140,10 @@ const Reviews = () => {
     setReview('')
     setFormError("")
 
-    
 
-  
     fetchReviews();
   }
+
 
 
 
@@ -186,8 +185,6 @@ const Reviews = () => {
           <option value="newesttop">Newest to Oldest</option>
         </select>
 
-        
-      
       <form onSubmit={handleSubmit}>
       <label htmlFor="review" className="reviewtag">REVIEWS</label>
         <textarea
@@ -257,6 +254,7 @@ const Reviews = () => {
 
 
 //Star rating system
+
 
 export default Reviews
 

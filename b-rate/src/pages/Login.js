@@ -14,8 +14,6 @@ const Login = () => {
     const [pass, setPass] = useState('')
     const navigate = useNavigate()
     
-
-
     async function handleSubmit(e) {
         e.preventDefault()
         try {
@@ -25,13 +23,14 @@ const Login = () => {
             })
             var location = window.location;
             if (error) throw error
+
             location.replace("/profile");
+
         }
         catch (error) {
             alert(error)
         }
     }
-    
 
     return (
         <div>
