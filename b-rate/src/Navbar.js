@@ -57,6 +57,7 @@ export default function Navbar() {
         const isLoginPage = location.pathname === "/Login";
         const isRegisterPage = location.pathname === "/register";
         const isForgotPage = location.pathname === "/forgot";
+        const isPasswordReset = location.pathname === "/password_reset";
         console.log(user)
 
         const HandleSignOut = async () => {
@@ -89,7 +90,7 @@ export default function Navbar() {
                     <CustomLink to="/" className="home">Home </CustomLink>
                     <CustomLink to="/Reviews" className="reviews"> Reviews </CustomLink>
                     <CustomLink to="/" className="logo"><img src={logo} alt="homelogo" className='logo' /></CustomLink>
-                    <CustomLink to="/" className="profile">Profile</CustomLink>
+                    <CustomLink to="/profile" className="profile">Profile</CustomLink>
                     <CustomLink onClick={HandleSignOut} className="register">Sign Out</CustomLink>
                 </ul>
             );

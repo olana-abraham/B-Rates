@@ -83,6 +83,12 @@ body {
   text-decoration-thickness: 3px;
 }
 
+.profile:hover {
+  text-decoration: underline;
+  text-decoration-color: #1295cd;
+  text-decoration-thickness: 3px;
+}
+
 .logo{
   transform:scale(.7);
 }

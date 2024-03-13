@@ -8,7 +8,14 @@ import { useNavigate } from "react-router-dom"
 import { Link } from 'react-router-dom';
 
 
+let { data: { user } } = await supabase.auth.getUser()
+try {
+    console.log(user.id)
+    user = true;
+}
+catch (error) {
 
+}
 
 
 export default function Home() {
@@ -47,7 +54,7 @@ export default function Home() {
                  <Link to="./Login" ><button className = "homebutton2">Login</button></Link>
             )}
             {user &&(
-                <Link to="./"> <button className = "homebutton2">Profile</button></Link>
+                <Link to="./profile"> <button className = "homebutton2">Profile</button></Link>
             )}
             </div>
 

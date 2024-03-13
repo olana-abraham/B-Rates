@@ -9,6 +9,7 @@ import Forgot from './pages/forgot';
 import Name from "./pages/Account_Info_1"
 import Favorite from "./pages/Account_Info_2"
 import Profile from "./pages/Profile"
+import PasswordReset from './pages/password_reset';
 
 import { Route, Routes } from "react-router-dom"
 import Footer from "./Footer";
@@ -27,9 +28,10 @@ function App() {
           <Route path="/account_info_1" element={<Name />} />
           <Route path="/account_info_2" element={<Favorite />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/password_reset" element={<PasswordReset />} />
         </Routes>
       </div>
-   <Footer/>
+    <Footer/>
     </div>
   );
 }

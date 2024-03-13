@@ -21,12 +21,11 @@ const Login = () => {
         try {
             let { data, error } = await supabase.auth.signInWithPassword({
                 email: email,
-                password: pass
+                password: pass,
             })
             var location = window.location;
             if (error) throw error
-            location.replace("/");
-
+            location.replace("/profile");
         }
         catch (error) {
             alert(error)
@@ -53,7 +52,7 @@ const Login = () => {
 
                 <div className="remember-forgot">
                     <label><input type="checkbox" />Remember Me </label>
-                    <a href="">Forgot Password?</a>
+                    <a href="./forgot">Forgot Password?</a>
                 </div>
 
                 <button type="submit">Sign In</button>
