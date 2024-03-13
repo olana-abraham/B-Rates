@@ -1,6 +1,7 @@
 import ImageSlider from '../ImageSlider';
 import '../home.css';
 import Navbar from "../Navbar";
+import Footer from "./Footer";
 import homeImage from '../inforgraphicb-rates.png';
 import React, { useState, useEffect } from 'react';
 import supabase from "../config/supabaseClient"
@@ -65,6 +66,7 @@ export default function Home() {
 
 
         </div>
+            
 </div>
 
     )

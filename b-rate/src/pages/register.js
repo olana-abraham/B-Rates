@@ -46,7 +46,7 @@ const Register = () => {
         <div>
 
         <Navbar />
-        <div className='wrapper'>
+        <div className='wrapperregister'>
             <form onSubmit={handleSubmit}>
                 <h1>Register</h1>
                 <div className="input-box">
@@ -72,7 +72,7 @@ const Register = () => {
             </form>
             <div >
 
-            <img src={myImage} alt="My Image" className='image' />
+            <img src={myImage} alt="My Image" className='imageregister' />
             </div>
         </div>
         </div>
