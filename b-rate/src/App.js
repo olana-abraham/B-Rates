@@ -15,18 +15,22 @@ import './App.css'
 
 function App() {
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/reviews" element={<Reviews />} />
-        <Route path="/Login" element={<Login />} />
-        <Route path="/Register" element={<Register />} />
-        <Route path="/forgot" element={<Forgot />} />
-      </Routes>
-      <Footer />
-    </>
-  )
-
+    <div className="app">
+      <div className="content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/reviews" element={<Reviews />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/forgot" element={<Forgot />} />
+          <Route path="/account_info_1" element={<Name />} />
+          <Route path="/account_info_2" element={<Favorite />} />
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
+      </div>
+   
+    </div>
+  );
 }
 
 export default App;

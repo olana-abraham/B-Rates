@@ -1,6 +1,9 @@
 import React from 'react'
 import './Account_Info_1.css'
 import { useLocation } from 'react-router-dom';
+import { useNavigate } from "react-router-dom"
+import { Link } from 'react-router-dom';
+
 
 export default function Name(){
     const location = useLocation();
