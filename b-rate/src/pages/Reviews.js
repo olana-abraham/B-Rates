@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 import supabase from "../config/supabaseClient"
 import Navbar from "../Navbar"
 import { Link } from 'react-router-dom';
-
+import Footer from "./Footer";
 import './Reviews.css'
 import {FaStar} from "react-icons/fa"
 
@@ -234,6 +234,8 @@ const Reviews = () => {
   ))}
 </div>
 )}
+
+
   </div>
 
 

@@ -114,19 +114,11 @@
 
 
 
-
-
 .wrapperregister button:hover {
     transform: rotate(0deg) skew(0deg) translate(0, -3px);
 }
 
-.wrapper button a {
-    text-decoration: none;
-    color:white;
-}
-
-
-.wrapper button a {
+.wrapperregister button a {
     text-decoration: none;
     color:white;
 }
@@ -136,6 +128,8 @@
     text-decoration: none;
     color:white;
 }
+
+
 
 
 
