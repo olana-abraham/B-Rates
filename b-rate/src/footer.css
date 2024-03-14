@@ -1,0 +1,19 @@
+.main-footer{
+    color:white;
+    background-color: #1295cd;
+    padding-top: 3rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: smaller;
+    height: 100%;
+}
+
+.test {
+    text-decoration: none;
+    color: white;
+}
+
+.test:hover {
+    text-decoration: underline;
+}
