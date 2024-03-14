@@ -1,7 +1,6 @@
 @import url('https://font.goggleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 .wrapper {
-    display: flex;
     width: 420px;
     background: white;
     padding: 50px 40px;
@@ -14,10 +13,11 @@
 
 .image {
     position: absolute;
-    justify-content: right;
-    width: auto;
-   
+    top: 0;
+    right: 0;
+    width: 50%;
     height: 100vh;
+
 }
 
 

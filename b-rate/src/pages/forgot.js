@@ -7,6 +7,8 @@ import myImage from './myImage.jpg';
 import Navbar from "../Navbar";
 import { useNavigate } from "react-router-dom"
 import { Link } from 'react-router-dom';
+import Footer from "./Footer";
+
 import supabase from "../config/supabaseClient.js"; // Import your Supabase client
 
 
@@ -28,7 +30,7 @@ export default function Forgot() {
         }
     }
 
-    return(
+    return (
         <div>
             <Navbar />
             <div className='wrapper'>
@@ -36,16 +38,16 @@ export default function Forgot() {
                     <h1>Forgot Password</h1>
                     <div className="input-box">
                         <input type="text" placeholder='Email' value={email}
-                            onChange={(e) => setEmail(e.target.value)}required />
-                        <MdEmail className='icon'/>
+                            onChange={(e) => setEmail(e.target.value)} required />
+                        <MdEmail className='icon' />
                     </div>
-    
+
                     <button type="submit" >Send</button>
                 </form>
-                <div >
 
-            <img src={myImage} alt="My Image" className='image' />
-                </div>  
+
+                <img src={myImage} alt="My Image" className='image' />
+
             </div>
         </div>
 

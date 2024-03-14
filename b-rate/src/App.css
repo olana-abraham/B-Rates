@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
 }
 
 .App-logo {
@@ -32,6 +33,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -43,17 +45,21 @@
   min-height: 10vh;
   text-align: center;
 }
+
 .content-wrap {
   flex: 1;
 }
 
 .container {
-  width: 100%; /* Example container width */
+  width: 100%;
+  /* Example container width */
 }
 
 .fluid-content {
-  width: 100%; /* Example fluid content width */
-  margin: 0; /* Center the content horizontally */
+  width: 100%;
+  /* Example fluid content width */
+  margin: 0;
+  /* Center the content horizontally */
 }
 
 .footer {

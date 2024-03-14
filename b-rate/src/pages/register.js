@@ -9,21 +9,6 @@ import { FaUser, FaLock } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Navbar from "../Navbar";
 
-let logged
-
-// function log() {
-
-//     let { data: { user } } = supabase.auth.getUser()
-
-//     console.log(user.id)
-//     const { data, error } = supabase
-//         .from('Users')
-//         .insert([
-//             { UID: user.id },
-//         ])
-//         .select()
-
-// }
 
 const Register = () => {
     const [email, setEmail] = useState('')

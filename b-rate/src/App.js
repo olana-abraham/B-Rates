@@ -29,8 +29,9 @@ function App() {
           <Route path="/password_reset" element={<PasswordReset />} />
         </Routes>
       </div>
-      <Footer/>
+      <Footer />
     </div>
+    
      
 
   );
