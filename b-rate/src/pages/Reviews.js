@@ -209,15 +209,14 @@ const Reviews = () => {
             {
             }
 
-            {formError && <p className="error">{formError}</p>}
-          </form>
-
-          {fetchError && (<p>{fetchError}</p>)}
-
-
-
-
-          { }
+        {formError && <p className="error">{formError}</p>}
+      </form>
+      
+      {fetchError && (<p>{fetchError}</p>)}
+  
+     
+      
+      {}
 
         </div>
 
