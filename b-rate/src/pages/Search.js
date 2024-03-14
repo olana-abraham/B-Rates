@@ -5,7 +5,7 @@ import supabase from "../config/supabaseClient"
 const Search = () => {
     const [username, setusername]  = useState('')
     const[otherUser, setotherUser] = useState('')
-    
+
     const handleSubmit = async (e) => {
         e.preventDefault()
         if(!username)
@@ -32,7 +32,6 @@ const Search = () => {
         {
             setotherUser(data)
         }
-
     }
     return(
         <form onSubmit={handleSubmit}>
