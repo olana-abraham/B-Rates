@@ -20,29 +20,33 @@ export default function Profile() {
   const handleEditClick = () => {
     setIsEditing(true);
   };
+  
+  const fetchUser = async () => {
+    try {
+      const { data: { user } } = await supabase.auth.getUser()
+      const { data, error } = await supabase
+        .from('Users')
+        .select()
+        .eq('UID', user.id);
 
-const fetchUser = async () => {
-  const { data: { user } } = await supabase.auth.getUser()
-  const { data, error } = await supabase
-  .from('Users')
-  .select()
-  .eq('UID', user.id);
-
-    if (error) {
+      if (error) {
         console.error('Error fetching user:', error.message);
       }
-      if(otherUser) searchUser();
+      if (otherUser) searchUser();
       if (!otherUser && data) {
-       setFirstName(data[0].Name.split(" ")[0])
-       setFavoriteDiningHall(data[0].Fav_Dining)
-       setLastName(data[0].Name.split(" ")[1])
-       setGradYear(data[0].Grad_year)
-       setAbout(data[0].AboutMe)
+        setFirstName(data[0].Name.split(" ")[0])
+        setFavoriteDiningHall(data[0].Fav_Dining)
+        setLastName(data[0].Name.split(" ")[1])
+        setGradYear(data[0].Grad_year)
+        setAbout(data[0].AboutMe)
       } else {
         console.log('User not found.');
       }
     
-}
+    }
+  
+    catch { }
+  }
   function searchUser()
   {
     if(otherUser)

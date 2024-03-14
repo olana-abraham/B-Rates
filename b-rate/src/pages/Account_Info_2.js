@@ -1,6 +1,8 @@
 import './Account_Info_2.css'
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import supabase from "../config/supabaseClient.js"
+
 
 export default function Favorite() {
   const buttonNamesRow1 = ['Bruin Cafe', 'Cafe Plate', 'Cafe 1919'];
@@ -11,7 +13,9 @@ export default function Favorite() {
   const [selectedButtonRow2, setSelectedButtonRow2] = useState('');
   const [selectedButtonRow3, setSelectedButtonRow3] = useState('');
 
+  let dining
   const handleButtonClick = (row, name) => {
+    dining = name
     switch (row) {
       case 1:
         setSelectedButtonRow1(name);
@@ -25,8 +29,26 @@ export default function Favorite() {
       default:
         break;
     }
-  };
 
+    Update();
+  };
+  async function Update() {
+    let { data: { user } } = await supabase.auth.getUser()
+    try {
+      const { data, error } = await supabase
+        .from('Users')
+        .update([
+          { Fav_Dining: dining },
+        ])
+        .eq('UID', user.id)
+
+      console.log(dining)
+      console.log(user.id)
+      var location = window.location;
+      location.replace("/Profile")
+    }
+    catch { }
+  }
   return (
     <div>
       <div className="favorite-wrapper">
