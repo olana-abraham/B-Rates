@@ -55,7 +55,7 @@ const fetchUser = async () => {
     }
   }
 useEffect(() => {
-  searchUser();
+  fetchUser();
 }, []);
 
 

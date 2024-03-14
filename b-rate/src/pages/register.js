@@ -9,6 +9,22 @@ import { FaUser, FaLock } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Navbar from "../Navbar";
 
+let logged
+
+// function log() {
+
+//     let { data: { user } } = supabase.auth.getUser()
+
+//     console.log(user.id)
+//     const { data, error } = supabase
+//         .from('Users')
+//         .insert([
+//             { UID: user.id },
+//         ])
+//         .select()
+
+// }
+
 const Register = () => {
     const [email, setEmail] = useState('')
     const [username, setUsername] = useState('')
@@ -28,41 +44,38 @@ const Register = () => {
                 options: {
                     data: { username: username },
                     emailRedirectTo: "http://localhost:3000/account_info_1",
-                },
-
+                }
             })
             if (error) throw error
             alert("Check your email for verification link")
+            //logged = true;
         }
         catch (error) {
             alert(error)
         }
-
-        const handleSubmit = async (e) => {
-            e.preventDefault()
-            navigate("/Account_Info_1", { state: { username: username, email:email, password:pass1 } }) 
-        }
     }
+
+
 
     return (
         <div>
 
-        <Navbar />
-        <div className='wrapperregister'>
-            <form onSubmit={handleSubmit}>
-                <h1>Register</h1>
-                <div className="input-box">
-                    <input type="text" placeholder='Username' onChange={(e) => setUsername(e.target.value)} required />
-                     <FaUser className='icon' />
-                </div>
-                <div className="input-box">
-                    <input type="text" placeholder='Email'
-                        onChange={(e) => setEmail(e.target.value)} required />
-                        <MdEmail className='icon'/>
-                </div>
-                <div className="input-box">
-                    <input type="password" placeholder='Create Password' 
-                        onChange={(e) => setPass1(e.target.value)} required />
+            <Navbar />
+            <div className='wrapperregister'>
+                <form onSubmit={handleSubmit}>
+                    <h1>Register</h1>
+                    <div className="input-box">
+                        <input type="text" placeholder='Username' onChange={(e) => setUsername(e.target.value)} required />
+                        <FaUser className='icon' />
+                    </div>
+                    <div className="input-box">
+                        <input type="text" placeholder='Email'
+                            onChange={(e) => setEmail(e.target.value)} required />
+                        <MdEmail className='icon' />
+                    </div>
+                    <div className="input-box">
+                        <input type="password" placeholder='Create Password'
+                            onChange={(e) => setPass1(e.target.value)} required />
                         <FaLock className='icon' />
                     </div>
                     <div className="input-box">
@@ -71,16 +84,16 @@ const Register = () => {
                         <FaLock className='icon' />
                     </div>
 
-                {/*If we want to link the register button to the survey, then uncomment the link portion of code*/}
-                
-                {/*<Link to="/account_info_1" >*/}<button type="submit" onClick={handleSubmit}>Register</button>{/*</Link>*/}
-           
-            </form>
-            <div >
+                    {/*If we want to link the register button to the survey, then uncomment the link portion of code*/}
 
-            <img src={myImage} alt="My Image" className='imageregister' />
+                    {/*<Link to="/account_info_1" >*/}<button type="submit"  onclick={handleSubmit}>Register</button>{/*</Link>*/}
+
+                </form>
+                <div >
+
+                    <img src={myImage} alt="My Image" className='imageregister' />
+                </div>
             </div>
-        </div>
         </div>
     )
 }

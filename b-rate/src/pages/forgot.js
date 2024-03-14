@@ -19,7 +19,7 @@ export default function Forgot() {
         e.preventDefault();
         try {
             let { data, error } = await supabase.auth.resetPasswordForEmail(email, {
-                emailRedirectTo: "http://localhost:3000/password_reset",
+                redirectTo: "http://localhost:3000/password_reset",
             });
             if (error) throw error
             alert('Password reset email sent. Please check your inbox.');

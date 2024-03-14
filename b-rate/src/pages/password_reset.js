@@ -23,7 +23,8 @@ export default function PasswordReset() {
             })
             if (error) throw error
             alert("Password changed successfully!");
-            navigate('/'); // Redirect to home page after successful password change
+            var location = window.location();
+            location.replace('/'); // Redirect to home page after successful password change
         } catch (error) {
             alert(error)
         }

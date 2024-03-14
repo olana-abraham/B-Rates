@@ -38,22 +38,27 @@ export default function Navbar() {
     }
 
     const fetchUser = async (e) => {
-        const {data, error} = await supabase
-            .from('Users')
-            .select()
-            .eq('username', username)
-        if(error)
-        {
-            alert("Could not fetch user's profile")
+        try {
+            const { data, error } = await supabase
+                .from('Users')
+                .select()
+                .eq('username', username)
+            if (error) {
+                alert("Could not fetch user's profile")
+                throw error
+
+            }
+            if (data.length == 0) {
+                alert("User does not exist")
+                throw error
+            }
+            if (data) {
+                setotherUser(data)
+                navigate("/Profile", { state: { otherUser: data } })
+            }
         }
-        if(data.length==0)
-        {
-            alert("User does not exist")
-        }
-        if(data)
-        {
-            setotherUser(data)
-            navigate("/Profile", { state: { otherUser: data } }) 
+        catch {
+            
         }
     }
 
