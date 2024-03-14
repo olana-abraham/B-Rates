@@ -1,6 +1,30 @@
 import React, { useState } from 'react'
 import './Profile.css'
 import Navbar from "../Navbar"
+import { useLocation } from 'react-router-dom';
+
+
+
+    
+
+//     return(
+//         <div> 
+//             <Navbar />
+//             { otherUser && (
+//         <div>
+//         {otherUser.map((user) => (
+//           <textarea
+//             value={`${user.Name}`}
+           
+//             // Add created_at if needed
+//             rows={50} // Set the number of rows as per your requirement
+//             cols={50} // Set the number of columns as per your requirement
+//             readOnly // Make the textarea read-only
+//           />
+//         ))}
+//       </div>
+//       )}
+            
 
 // The backend should update the following fields: firstName, lastName, gradYear, favoriteDiningHall, about
 
@@ -11,6 +35,9 @@ export default function Profile() {
   const [gradYear, setGradYear] = useState('2026');
   const [favoriteDiningHall, setFavoriteDiningHall] = useState('De Neve');
   const [about, setAbout] = useState('My name is Tre and I got a basketball game tomorrow.');
+  const location = useLocation();
+  const otherUser = location.state && location.state.otherUser;
+    
 
   const handleEditClick = () => {
     setIsEditing(true);

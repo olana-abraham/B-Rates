@@ -14,7 +14,7 @@ const Register = () => {
     const [username, setUsername] = useState('')
     const [pass1, setPass1] = useState('')
     const [pass2, setPass2] = useState('')
-
+    const navigate = useNavigate()
 
     async function handleSubmit(e) {
         e.preventDefault()
@@ -37,27 +37,32 @@ const Register = () => {
         catch (error) {
             alert(error)
         }
+
+        const handleSubmit = async (e) => {
+            e.preventDefault()
+            navigate("/Account_Info_1", { state: { username: username, email:email, password:pass1 } }) 
+        }
     }
 
     return (
         <div>
 
-            <Navbar />
-            <div className='wrapper'>
-                <form onSubmit={handleSubmit}>
-                    <h1>Register</h1>
-                    <div className="input-box">
-                        <input type="text" placeholder='Username' onChange={(e) => setUsername(e.target.value)} required />
-                        <FaUser className='icon' />
-                    </div>
-                    <div className="input-box">
-                        <input type="text" placeholder='Email'
-                            onChange={(e) => setEmail(e.target.value)} required />
-                        <MdEmail className='icon' />
-                    </div>
-                    <div className="input-box">
-                        <input type="password" placeholder='Create Password'
-                            onChange={(e) => setPass1(e.target.value)} required />
+        <Navbar />
+        <div className='wrapperregister'>
+            <form onSubmit={handleSubmit}>
+                <h1>Register</h1>
+                <div className="input-box">
+                    <input type="text" placeholder='Username' onChange={(e) => setUsername(e.target.value)} required />
+                     <FaUser className='icon' />
+                </div>
+                <div className="input-box">
+                    <input type="text" placeholder='Email'
+                        onChange={(e) => setEmail(e.target.value)} required />
+                        <MdEmail className='icon'/>
+                </div>
+                <div className="input-box">
+                    <input type="password" placeholder='Create Password' 
+                        onChange={(e) => setPass1(e.target.value)} required />
                         <FaLock className='icon' />
                     </div>
                     <div className="input-box">
@@ -66,16 +71,16 @@ const Register = () => {
                         <FaLock className='icon' />
                     </div>
 
-                    {/*If we want to link the register button to the survey, then uncomment the link portion of code*/}
+                {/*If we want to link the register button to the survey, then uncomment the link portion of code*/}
+                
+                {/*<Link to="/account_info_1" >*/}<button type="submit" onClick={handleSubmit}>Register</button>{/*</Link>*/}
+           
+            </form>
+            <div >
 
-                    {/*<Link to="/account_info_1" >*/}<button type="submit">Register</button>{/*</Link>*/}
-
-                </form>
-                <div >
-
-                    <img src={myImage} alt="My Image" className='image' />
-                </div>
+            <img src={myImage} alt="My Image" className='imageregister' />
             </div>
+        </div>
         </div>
     )
 }

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 import supabase from "../config/supabaseClient"
 import Navbar from "../Navbar"
 import { Link } from 'react-router-dom';
-
+import Footer from "./Footer";
 import './Reviews.css'
 import { FaStar } from "react-icons/fa"
 
@@ -144,10 +144,9 @@ const Reviews = () => {
     setFormError("")
 
 
-
-
     fetchReviews();
   }
+
 
 
 
@@ -183,25 +182,23 @@ const Reviews = () => {
             <option value="1">1 star</option>
           </select>
 
-          <select id="Time" onChange={handleSelectChange3} className="select-container">
-            { }
-            <option value="oldesttop">Oldest to Newest</option>
-            <option value="newesttop">Newest to Oldest</option>
-          </select>
+        <select id="Time" onChange={handleSelectChange3} className="select-container">
+          {}
+          <option value="oldesttop">Oldest to Newest</option>
+          <option value="newesttop">Newest to Oldest</option>
+        </select>
 
-
-
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="review" className="reviewtag">REVIEWS</label>
-            <textarea
-              className="textarea"
-              id="Review"
-              value={Review}
-              onChange={(e) => setReview(e.target.value)}
-              rows={6}
-              cols={80}
-            />
-            { }
+      <form onSubmit={handleSubmit}>
+      <label htmlFor="review" className="reviewtag">REVIEWS</label>
+        <textarea
+          className="textarea"
+          id="Review"
+          value = {Review}
+          onChange={(e) => setReview(e.target.value)}
+          rows={6}
+          cols={80}
+        />
+        {}
 
 
 
@@ -224,23 +221,25 @@ const Reviews = () => {
 
         </div>
 
-      </div>
-      {reviews && (
-        <div className="outputside">
-          {reviews.map((review, index) => (
-            <textarea
-              className="reviewoutput"
-              key={index}
-              value={`${review.Name} ${review.created_at ? review.created_at.substring(0, 10) + ' ' + review.created_at.substring(11, 16) : ''} \nRating: ${review.rating || ''} \n${review.Review || ''}`}
+  </div>
+    { reviews && (
+  <div className="outputside">
+  {reviews.map((review, index) => (
+    <textarea
+    className="reviewoutput"
+      key={index}
+      value={`${review.Name} ${review.created_at ? review.created_at.substring(0, 10) + ' ' + review.created_at.substring(11, 16) : ''} \nRating: ${review.rating || ''} \n${review.Review || ''}`}
+     
+      rows={6} 
+      cols={80} 
+      readOnly 
+    />
+  ))}
+</div>
+)}
 
-              rows={6}
-              cols={80}
-              readOnly
-            />
-          ))}
-        </div>
-      )}
-    </div>
+
+  </div>
 
 
 
@@ -261,6 +260,7 @@ const Reviews = () => {
 
 
 //Star rating system
+
 
 export default Reviews
 

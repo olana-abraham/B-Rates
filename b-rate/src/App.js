@@ -3,7 +3,7 @@ import Reviews from "./pages/Reviews"
 import Home from "./pages/Home"
 import Login from "./pages/Login"
 import Register from "./pages/register"
-
+import Footer from "./pages/Footer";
 import Forgot from './pages/forgot';
 
 import Name from "./pages/Account_Info_1"
@@ -12,7 +12,6 @@ import Profile from "./pages/Profile"
 import PasswordReset from './pages/password_reset';
 
 import { Route, Routes } from "react-router-dom"
-import Footer from "./Footer";
 import './App.css'
 
 function App() {
@@ -31,8 +30,10 @@ function App() {
           <Route path="/password_reset" element={<PasswordReset />} />
         </Routes>
       </div>
-    <Footer/>
+      <Footer/>
     </div>
+     
+
   );
 }
 
