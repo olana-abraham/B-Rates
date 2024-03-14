@@ -1,11 +1,10 @@
-import React from 'react'
 import './Account_Info_1.css'
 import { useLocation } from 'react-router-dom';
 import supabase from "../config/supabaseClient.js"
 
 import { useNavigate } from "react-router-dom"
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
 
 
 let { data: { user } } = await supabase.auth.getUser()
@@ -66,5 +65,7 @@ export default function Name() {
 
 
 }
+
+
 
 
