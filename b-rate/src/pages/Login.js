@@ -1,6 +1,7 @@
 import React from 'react'
 import './login.css'
 import { FaUser, FaLock } from "react-icons/fa";
+import { FaUser, FaLock } from "react-icons/fa";
 import myImage from './myImage.jpg';
 import { useEffect, useState } from "react"
 import supabase from "../config/supabaseClient.js"
@@ -43,19 +44,26 @@ const Login = () => {
                     <input type="password" placeholder='Password' onChange={(e) => setPass(e.target.value)} required />
                     <FaLock className='icon' />
 
-                        </div>
+                </div>
 
                 <div className="remember-forgot">
                     <label><input type="checkbox" />Remember Me </label>
                     <a href="">Forgot Password?</a>
                 </div>
+                <div className="remember-forgot">
+                    <label><input type="checkbox" />Remember Me </label>
+                    <a href="">Forgot Password?</a>
+                </div>
 
-                        <button type="submit">Sign In</button>
-                        <div className="register-link">
-                            <p>Don't have an account? <a href="./register">Register</a></p>
+                <button type="submit">Sign In</button>
+                <div className="register-link">
+                    <p>Don't have an account? <a href="./register">Register</a></p>
 
-                        </div>
+                </div>
 
+            </form>
+
+            <div >
             </form>
 
             <div >
