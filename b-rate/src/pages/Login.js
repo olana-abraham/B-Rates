@@ -14,14 +14,12 @@ const Login = () => {
     const [pass, setPass] = useState('')
     const navigate = useNavigate()
     
-
-
     async function handleSubmit(e) {
         e.preventDefault()
         try {
             let { data, error } = await supabase.auth.signInWithPassword({
                 email: email,
-                password: pass,
+                password: pass
             })
             var location = window.location;
             if (error) throw error
@@ -31,7 +29,6 @@ const Login = () => {
             alert(error)
         }
     }
-    
 
     return (
         <div>
@@ -52,7 +49,7 @@ const Login = () => {
 
                 <div className="remember-forgot">
                     <label><input type="checkbox" />Remember Me </label>
-                    <a href="./forgot">Forgot Password?</a>
+                    <a href="">Forgot Password?</a>
                 </div>
 
                 <button type="submit">Sign In</button>
@@ -63,12 +60,11 @@ const Login = () => {
 
             </form>
 
-            
-        </div>
-        <div >
+            <div >
 
                 <img src={myImage} alt="My Image" className='image' />
             </div>
+        </div>
         </div>
 
 
