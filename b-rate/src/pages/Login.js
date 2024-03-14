@@ -1,16 +1,16 @@
 import React from 'react'
 import './login.css'
 import { FaUser, FaLock } from "react-icons/fa";
-import { FaUser, FaLock } from "react-icons/fa";
 import myImage from './myImage.jpg';
 import { useEffect, useState } from "react"
 import supabase from "../config/supabaseClient.js"
 import { Auth } from '@supabase/auth-ui-react'
+import Navbar from "../Navbar";
+
 
 const Login = () => {
     const [email, setEmail] = useState('')
     const [pass, setPass] = useState('')
-    const navigate = useNavigate()
     
     async function handleSubmit(e) {
         e.preventDefault()
@@ -31,8 +31,6 @@ const Login = () => {
     return (
         <div>
         <Navbar />
-        <div>
-        <Navbar />
         <div className='wrapper'>
             <form onSubmit={handleSubmit}>
                 <h1>Welcome Back</h1>
@@ -51,10 +49,6 @@ const Login = () => {
                     <label><input type="checkbox" />Remember Me </label>
                     <a href="./forgot">Forgot Password?</a>
                 </div>
-                <div className="remember-forgot">
-                    <label><input type="checkbox" />Remember Me </label>
-                    <a href="">Forgot Password?</a>
-                </div>
 
                 <button type="submit">Sign In</button>
                 <div className="register-link">
@@ -71,7 +65,7 @@ const Login = () => {
                 <img src={myImage} alt="My Image" className='image' />
             </div>
         </div>
-       
+        </div>
 
 
 

@@ -2,6 +2,7 @@ import { Link, useMatch, useResolvedPath, useLocation } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaSearch } from "react-icons/fa";
 import logo from './b-rate-logo.png';
+import './index.css';
 import React, { useState, useEffect } from 'react';
 import supabase from "./config/supabaseClient"
 import { useNavigate } from "react-router-dom"

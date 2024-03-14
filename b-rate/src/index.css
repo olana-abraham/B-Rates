@@ -92,7 +92,7 @@ body {
 
 .logo {
   transform: scale(.7);
-
+}
 .reviewbutton {
 
   background-color: rgba(0, 0, 0, 0.399);
@@ -138,7 +138,7 @@ body {
   width:350px;
   padding: 0 10px;
 }
-}
+
 
 
 
