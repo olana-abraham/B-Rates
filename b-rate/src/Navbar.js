@@ -73,7 +73,7 @@ export default function Navbar() {
 
 
 
-        if (!isLoginPage && !isRegisterPage && !isForgotPage && !user) {
+        if (!isLoginPage && !isRegisterPage && !isForgotPage && !isPasswordReset && !user) {
             return (
                 <ul className="mainlinks">
                     <CustomLink to="/" className="home">Home </CustomLink>
@@ -88,7 +88,7 @@ export default function Navbar() {
                 <ul className="mainlinks">
                     <CustomLink to="/" className="home">Home </CustomLink>
                     <CustomLink to="/Reviews" className="reviews"> Reviews </CustomLink>
-                    <CustomLink to="/" className="profile">Profile</CustomLink>
+                    <CustomLink to="/profile" className="profile">Profile</CustomLink>
                     <CustomLink onClick={HandleSignOut} className="register">Sign Out</CustomLink>
                 </ul>
             );

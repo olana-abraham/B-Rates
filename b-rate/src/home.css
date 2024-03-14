@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300;400,700,900');
 
 .slide-container {
-    position: relative;
+    position:relative;
+    margin-left: 400px;
+    width: 100%;
   }
   
   .image-container {
@@ -9,11 +11,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    width: 100%;
-    margin: 0;
     padding: 0;
     background-size: cover;
+    border-radius: 10px;
   }
 
   .Nav {
@@ -21,15 +21,6 @@
     color: white;
   }
   
-  .transparent-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-  }
   
   .caption {
     font-size: 75px;
@@ -46,30 +37,26 @@
 
 
   .left{
-    width: 100%;
-    margin-left: -350px;
-
- 
+    width:50%;
+    margin-left: -350px; 
+    height: 50%;
   }
 
 .left img{
   position: relative;
-  height: 500px;
-  width: 100%;
-  transform:scale(.7);
+  height: 200px;
   margin-left: 250px;
 }
 
   .right{
-    width: 60%;
+    width: 34%;
     background-color: white;
     text-align: left;
     margin-left: 100px;
     font-family: Lato;
-    margin-top: 50px;
+    margin-top: 175px;
     margin-right: 100px;
-
-    
+    align-items: center;
     
   }
 
