@@ -6,6 +6,7 @@ import { useEffect, useState } from "react"
 import supabase from "../config/supabaseClient.js"
 import { Auth } from '@supabase/auth-ui-react'
 import Navbar from "../Navbar";
+import { Link, useMatch, useResolvedPath, useLocation } from "react-router-dom";
 
 
 const Login = () => {
