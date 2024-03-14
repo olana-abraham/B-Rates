@@ -1,5 +1,4 @@
 .next-button {
-    position: fixed;
     bottom: 50px;
     right: 100px;
 
@@ -10,6 +9,8 @@
     border: none;
     cursor: pointer;
     border-radius: 20px;
+    margin-bottom: 50px;
+    margin-left: 1150px
   }
 
   .next-button a{
@@ -21,7 +22,7 @@
     transform: rotate(0deg) skew(0deg) translate(0, -3px);
 }
 
-.name-box input {
+.profile-box input {
     width: 20%;
     height: 100%;
     border: 2px solid lightgray;
