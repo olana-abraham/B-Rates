@@ -25,10 +25,10 @@ const Register = () => {
                 email: email,
                 password: pass1,
                 options: {
-
-                    data: { username: username }
+                    data: { username: username },
+                    emailRedirectTo: "http://localhost:3000/account_info_1",
                 },
-                redirectTo: "http://localhost:3000/account_info_1"
+
             })
             if (error) throw error
             alert("Check your email for verification link")
@@ -63,13 +63,12 @@ const Register = () => {
                     <input type="password" placeholder='Create Password' 
                         onChange={(e) => setPass1(e.target.value)} required />
                         <FaLock className='icon' />
-                </div>
-                <div className="input-box">
-                    <input type="password" placeholder='Confirm Password'
-                        onChange={(e) => setPass2(e.target.value)} required />
+                    </div>
+                    <div className="input-box">
+                        <input type="password" placeholder='Confirm Password'
+                            onChange={(e) => setPass2(e.target.value)} required />
                         <FaLock className='icon' />
-                </div>
-
+                    </div>
 
                 {/*If we want to link the register button to the survey, then uncomment the link portion of code*/}
                 
