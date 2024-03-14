@@ -12,7 +12,7 @@ import { Link, useMatch, useResolvedPath, useLocation } from "react-router-dom";
 const Login = () => {
     const [email, setEmail] = useState('')
     const [pass, setPass] = useState('')
-    
+
     async function handleSubmit(e) {
         e.preventDefault()
         try {
@@ -31,43 +31,37 @@ const Login = () => {
 
     return (
         <div>
-        <Navbar />
-        <div className='wrapper'>
-            <form onSubmit={handleSubmit}>
-                <h1>Welcome Back</h1>
-                <h2>Login to Leave Reviews</h2>
-                <div className="input-box">
-                    <input type="text" placeholder='Email' onChange={(e) => setEmail(e.target.value)} required />
-                    <FaUser className='icon' />
+            <Navbar />
+            <div className='wrapper'>
+                <form onSubmit={handleSubmit}>
+                    <h1>Welcome Back</h1>
+                    <h2>Login to Leave Reviews</h2>
+                    <div className="input-box">
+                        <input type="text" placeholder='Email' onChange={(e) => setEmail(e.target.value)} required />
+                        <FaUser className='icon' />
+                    </div>
+                    <div className="input-box">
+                        <input type="password" placeholder='Password' onChange={(e) => setPass(e.target.value)} required />
+                        <FaLock className='icon' />
+
+                    </div>
+
+                    <div className="remember-forgot">
+                        <label><input type="checkbox" />Remember Me </label>
+                        <Link to="/forgot" > Forgot Password?</Link>
+
+                    </div>
+
+                    <button type="submit">Sign In</button>
+                    <div className="register-link">
+                        <p>Don't have an account? <a href="./register">Register</a></p>
+                    </div>
+
+                </form>
+                <div >
+                    <img src={myImage} alt="My Image" className='loginimage' />
                 </div>
-                <div className="input-box">
-                    <input type="password" placeholder='Password' onChange={(e) => setPass(e.target.value)} required />
-                    <FaLock className='icon' />
-
-                </div>
-
-                <div className="remember-forgot">
-                    <label><input type="checkbox" />Remember Me </label>
-                    <Link to="/forgot" > Forgot Password?</Link>
-
-                </div>
-
-                <button type="submit">Sign In</button>
-                <div className="register-link">
-                    <p>Don't have an account? <a href="./register">Register</a></p>
-
-
-                </div>
-
-            </form>
-
-        
-
-            <div >
-
-                <img src={myImage} alt="My Image" className='image' />
             </div>
-        </div>
         </div>
 
 

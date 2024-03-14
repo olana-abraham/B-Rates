@@ -6,7 +6,8 @@
     padding: 50px 40px;
     margin-top: -5px;
     margin-left: 125px;
-    margin-bottom: 40px;
+    margin-bottom: 100px;
+
     border: 2px solid rgba(255, 255, 255, .2);
 }
 
@@ -16,7 +17,8 @@
     top: 0;
     right: 0;
     width: 50%;
-    height: 100vh;
+    height: 75.8vh;
+    object-fit: cover;
 
 }
 
@@ -139,8 +141,6 @@
     font-style: bold;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    justify-content: center;
-    align-items: center;
 
 
 }

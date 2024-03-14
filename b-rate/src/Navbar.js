@@ -105,7 +105,7 @@ export default function Navbar() {
             var location = window.location;
             try {
                 let { error } = await supabase.auth.signOut();
-                location.reload();
+                location.replace("/");
                 if (error) throw error
             } catch (error) {
                 alert(error.message);
@@ -124,7 +124,7 @@ export default function Navbar() {
                 </ul>
             );
         }
-        if (user) {
+        if (user && !isPasswordReset) {
             return (
                 <ul className="mainlinks">
                     <CustomLink to="/" className="home">Home </CustomLink>

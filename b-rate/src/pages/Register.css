@@ -3,6 +3,7 @@
 .wrapperregister {
     width: 420px;
     background: white;
+    display: relative;
     padding: 50px 40px;
     margin-top: -5px;
     margin-left: 125px;
@@ -16,8 +17,9 @@
     top: 0;
     right: 0;
     width: 50%;
-    height: 100vh;
+    height: 98.5vh;
     object-fit: cover;
+    overflow: hidden;
 }
 
 
@@ -108,7 +110,7 @@
     font-size: 16px;
     color: white;
     font-weight: 700;
-    
+
 
 }
 
@@ -120,13 +122,13 @@
 
 .wrapperregister button a {
     text-decoration: none;
-    color:white;
+    color: white;
 }
 
 
 .wrapperregister button a {
     text-decoration: none;
-    color:white;
+    color: white;
 }
 
 

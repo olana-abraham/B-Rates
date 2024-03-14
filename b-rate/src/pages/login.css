@@ -1,27 +1,27 @@
 @import url('https://font.goggleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Raleway:300;400,700,900');
 
-.wrapper {
+.loginwrapper {
     width: 420px;
     background: white;
     padding: 50px 40px;
     margin-top: 40px;
     margin-left: 80px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     border: 2px solid rgba(182, 25, 25, 0.2);
     font: normal normal 300 22px/33px Poligon;
 }
 
 
 
-.image {
-    position: relative;
+.loginimage {
+    position: absolute;
     top: 0;
     right: 0;
     width: 50%;
-    height: 100vh;
+    height: 100.5vh;
     object-fit: cover;
-    overflow: hidden;
+
 }
 
 
@@ -141,7 +141,6 @@
     font-style: bold;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    justify-content: center;
-    align-items: center;
+
 
 }
