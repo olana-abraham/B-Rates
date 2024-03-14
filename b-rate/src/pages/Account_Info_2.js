@@ -4,11 +4,11 @@ import { useNavigate } from "react-router-dom"
 import { Link } from 'react-router-dom';
 
 
-export default function Favorite(){
+export default function Favorite() {
     const buttonNamesRow1 = ['Bruin Cafe', 'Cafe Plate', 'Cafe 1919'];
     const buttonNamesRow2 = ['De Neve', 'Epicuria', 'Rendezvouz'];
     const buttonNamesRow3 = ['Epicuria at Ackerman', 'Feast at Rieber', 'The Study at Hedrick'];
-    return(
+    return (
         <div>
             <div className="favorite-wrapper">
                 <h1>Feeling hungry?</h1>
@@ -17,25 +17,25 @@ export default function Favorite(){
                 <div className="button-row">
                     {buttonNamesRow1.map((name, index) => (
                         <button key={index} className="dining-option"><a href='./Profile'>{name}</a></button>
-                            ))}
+                    ))}
                 </div>
 
 
                 <div className="button-row">
                     {buttonNamesRow2.map((name, index) => (
                         <button key={index} className="dining-option"><a href='./Profile'>{name}</a></button>
-                            ))}
+                    ))}
                 </div>
 
                 <div className="button-row">
                     {buttonNamesRow3.map((name, index) => (
                         <button key={index} className="dining-option"><a href='./Profile'>{name}</a></button>
-                            ))}
+                    ))}
                 </div>
             </div>
 
         </div>
 
-         
+
     )
 }
