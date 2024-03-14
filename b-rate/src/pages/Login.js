@@ -47,12 +47,14 @@ const Login = () => {
 
                 <div className="remember-forgot">
                     <label><input type="checkbox" />Remember Me </label>
-                    <a href="./forgot">Forgot Password?</a>
+                    <Link to="/forgot" > Forgot Password?</Link>
+
                 </div>
 
                 <button type="submit">Sign In</button>
                 <div className="register-link">
                     <p>Don't have an account? <a href="./register">Register</a></p>
+
 
                 </div>
 
