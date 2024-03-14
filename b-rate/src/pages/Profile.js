@@ -6,6 +6,17 @@ import supabase from "../config/supabaseClient.js"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
+let { data: { user } } = await supabase.auth.getUser()
+ function findUser() {
+  try {
+    console.log(user.id)
+    return true
+  }
+  catch {
+    alert("Must be logged in to edit profile.")
+    return false
+  }
+}
 export default function Profile() {
   const [isEditing, setIsEditing] = useState(false);
   const [firstName, setFirstName] = useState('');
@@ -16,9 +27,25 @@ export default function Profile() {
   const location = useLocation();
   const otherUser = location.state && location.state.otherUser;
     
+  
+
+  async function Update() {
+    let { data: { user } } = await supabase.auth.getUser()
+    try {
+      const { data, error } = await supabase
+        .from('Users')
+        .update([
+          { Fav_Dining: favoriteDiningHall, Name: firstName + " " + lastName, Grad_year: gradYear, AboutMe: about },
+        ])
+        .eq('UID', user.id)
+    }
+    catch { }
+  }
 
   const handleEditClick = () => {
-    setIsEditing(true);
+    let edit = findUser();
+    setIsEditing(edit);
+    console.log(edit)
   };
   
   const fetchUser = async () => {
@@ -64,7 +91,7 @@ useEffect(() => {
 
 
   const handleSaveClick = () => {
-
+    Update()
     setIsEditing(false);
   };
 

@@ -42,8 +42,6 @@ export default function Favorite() {
         ])
         .eq('UID', user.id)
 
-      console.log(dining)
-      console.log(user.id)
       var location = window.location;
       location.replace("/Profile")
     }
