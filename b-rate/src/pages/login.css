@@ -5,10 +5,9 @@
     width: 420px;
     background: white;
     padding: 50px 40px;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-left: 80px;
     margin-bottom: 40px;
-    border: 2px solid rgba(182, 25, 25, 0.2);
     font: normal normal 300 22px/33px Poligon;
 }
 
@@ -136,12 +135,3 @@
     text-decoration: underline;
 }
 
-.wrapper {
-    font-family: 'Raleway', sans-serif;
-    font-style: bold;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    justify-content: center;
-    align-items: center;
-
-}

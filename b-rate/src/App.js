@@ -26,9 +26,10 @@ function App() {
           <Route path="/account_info_1" element={<Name />} />
           <Route path="/account_info_2" element={<Favorite />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/password_reset" element={<PasswordReset />} />
         </Routes>
       </div>
-   
+    <Footer/>
     </div>
   );
 }

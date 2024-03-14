@@ -15,31 +15,31 @@
   margin-top: 50px;
 }
 
-.profile-container {
-  font-family: 'Raleway', sans-serif;
-  background-color: var(--bkg2);
-  border-radius: .5rem;
-  position: relative;
-  text-align: center;
-  margin-top: 10px;
-  margin-left: 425px;
-  margin-right: 425px;
-  margin-bottom: 100px;
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
-.profile-container::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: .5rem;
-  background: var(--gradient);
-  z-index: -1;
-  transform: translate(4.5%, 5.5%) scale(.94);
-  filter: blur(10px);
-  opacity: .5;
-}
+  .profile-container {
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--bkg2);
+    border-radius: .5rem;
+    position: relative;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 425px;
+    margin-right: 425px;
+    margin-bottom: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  
+  .profile-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: .5rem;
+    background: var(--gradient);
+    z-index: -1;
+    transform: translate(4.5%, 5.5%) scale(.94);
+    filter: blur(10px);
+    opacity: .5;
+  }
 
 .review-header {
   display: grid;

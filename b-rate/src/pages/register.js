@@ -25,6 +25,7 @@ const Register = () => {
                 email: email,
                 password: pass1,
                 options: {
+
                     data: { username: username }
                 },
                 redirectTo: "http://localhost:3000/account_info_1"
@@ -68,7 +69,12 @@ const Register = () => {
                         onChange={(e) => setPass2(e.target.value)} required />
                         <FaLock className='icon' />
                 </div>
-                <button type="submit" ><a onClick={handleSubmit}>Register</a></button>
+
+
+                {/*If we want to link the register button to the survey, then uncomment the link portion of code*/}
+                
+                {/*<Link to="/account_info_1" >*/}<button type="submit" onClick={handleSubmit}>Register</button>{/*</Link>*/}
+           
             </form>
             <div >
 

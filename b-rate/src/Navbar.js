@@ -4,7 +4,7 @@ import { FaSearch } from "react-icons/fa";
 import logo from './b-rate-logo.png';
 import React, { useState, useEffect } from 'react';
 import supabase from "./config/supabaseClient"
-
+import { useNavigate } from "react-router-dom"
 
 
 
@@ -20,6 +20,7 @@ console.log(user)
 
 
 export default function Navbar() {
+
     const location = useLocation();
     const [username, setusername]  = useState('')
     const[otherUser, setotherUser] = useState('')
@@ -55,16 +56,33 @@ export default function Navbar() {
         }
     }
 
+
     // Check if the current location matches the login or register page routes
 
 
 
     useEffect(() => {
         const searchBox = document.getElementById("search-bar");
-        const icon = document.getElementsByClassName("submit")[0];
-        icon.onclick = function () {
-            searchBox.classList.toggle("active");
-        }
+        const logo = document.getElementsByClassName("submit")[0];
+
+
+        const showSearchBar = () => {
+            searchBox.classList.add("active");
+        };
+
+        const hideSearchBar = () => {
+            searchBox.classList.remove("active");
+        };
+
+        logo.addEventListener("mouseover", showSearchBar);
+        searchBox.addEventListener("mouseover", showSearchBar);
+        searchBox.addEventListener("mouseout", hideSearchBar);
+
+        return () => {
+            logo.removeEventListener("mouseover", showSearchBar);
+            searchBox.removeEventListener("mouseover", showSearchBar);
+            searchBox.removeEventListener("mouseout", hideSearchBar);
+        };
     }, []);
 
     function Nav({ }) {
@@ -124,6 +142,7 @@ export default function Navbar() {
           onChange={(e) => setusername(e.target.value)}/>
                 <button class="submit" onClick={handleSubmit}><FaSearch /></button>
             </div>
+
             </body>
 
 
@@ -144,6 +163,7 @@ function CustomLink({ to, children, ...props }) {
 
 
     )
+
 
 
 
