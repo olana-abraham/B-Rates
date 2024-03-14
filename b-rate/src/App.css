@@ -37,10 +37,11 @@
   }
 }
 
-.container {
+.app {
   display: flex;
   flex-direction: column;
   min-height: 10vh;
+  text-align: center;
 }
 .content-wrap {
   flex: 1;
@@ -53,4 +54,9 @@
 .fluid-content {
   width: 100%; /* Example fluid content width */
   margin: 0; /* Center the content horizontally */
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
 }

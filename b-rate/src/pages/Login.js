@@ -2,10 +2,11 @@ import React from 'react'
 import './login.css'
 import { FaUser, FaLock } from "react-icons/fa";
 import myImage from './myImage.jpg';
-
+import Navbar from '../Navbar.js';
 import { useEffect, useState } from "react"
 import supabase from "../config/supabaseClient.js"
 import { useNavigate } from "react-router-dom"
+import { Link } from 'react-router-dom';
 
 
 const Login = () => {
@@ -18,10 +19,13 @@ const Login = () => {
         try {
             let { data, error } = await supabase.auth.signInWithPassword({
                 email: email,
-                password: pass
+                password: pass,
             })
+            var location = window.location;
             if (error) throw error
-            navigate("/")
+
+            location.replace("/profile");
+
         }
         catch (error) {
             alert(error)
@@ -29,8 +33,8 @@ const Login = () => {
     }
 
     return (
-
-
+        <div>
+        <Navbar />
         <div className='wrapper'>
             <form onSubmit={handleSubmit}>
                 <h1>Welcome Back</h1>
@@ -47,7 +51,7 @@ const Login = () => {
 
                 <div className="remember-forgot">
                     <label><input type="checkbox" />Remember Me </label>
-                    <a href="">Forgot Password?</a>
+                    <a href="./forgot">Forgot Password?</a>
                 </div>
 
                 <button type="submit">Sign In</button>
@@ -58,12 +62,13 @@ const Login = () => {
 
             </form>
 
-            <div >
+            
+        </div>
+        <div >
 
                 <img src={myImage} alt="My Image" className='image' />
             </div>
         </div>
- 
 
 
 

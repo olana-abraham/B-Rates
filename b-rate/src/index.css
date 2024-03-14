@@ -25,6 +25,7 @@ body {
   gap: 2rem;
   font-size: 20px;
   padding: 0 1rem;
+  font-family: 'Raleway', sans-serif;
 }
 
 
@@ -42,9 +43,8 @@ body {
   display: flex;
   gap: 2rem;
   margin-right: 100px;
-  margin:auto;
-      list-style-type: none;
-      align-items: center;
+  list-style-type: none;
+  align-items: center;
 
 
 }
@@ -82,6 +82,12 @@ body {
   text-decoration-thickness: 3px;
 }
 
+.profile:hover {
+  text-decoration: underline;
+  text-decoration-color: #1295cd;
+  text-decoration-thickness: 3px;
+}
+
 .logo{
   transform:scale(.7);
 }
@@ -103,11 +109,12 @@ body {
 
 .search-txt {
   width: 0;
-  font-size: 26px;
+  font-size: 20px;
   border: none;
   background: transparent;
   outline: none;
   transition: .25s;
+    font-family: 'Raleway', sans-serif;
 }
 
 
