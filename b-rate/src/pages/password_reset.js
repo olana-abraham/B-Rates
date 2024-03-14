@@ -48,7 +48,7 @@ export default function PasswordReset() {
                     <button type="submit">Reset</button>
                 </form>
                 <div>
-                    <img src={myImage} alt="My Image" className='image' />
+                    <img src={myImage} alt="My Image" className='resetimage' />
                 </div>
             </div>
         </div>

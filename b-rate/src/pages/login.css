@@ -24,6 +24,15 @@
 
 }
 
+.resetimage {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 86.5vh;
+    object-fit: cover;
+
+}
 
 
 
