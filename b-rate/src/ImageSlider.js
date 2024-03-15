@@ -13,7 +13,7 @@ const slideImages = [
     url: 'https://s3.amazonaws.com/cms.ipressroom.com/173/files/20193/5cafc40a2cfac23fe4039107_Court+of+Sciences_64/Court+of+Sciences_64_d5f3b649-45a1-497d-807b-f5b23ad4d8dd-prv.jpg',
   },
   {
-    url: 'https://s3.amazonaws.com/cms.ipressroom.com/173/files/20125/52e70e0ef6091d782f0001e4__U7H2205/_U7H2205_15c046e1-fc61-4d9d-9df4-240e1827fae9-prv.jpg',
+    url: 'https://www.collegemagazine.com/wp-content/uploads/2023/08/IMG_3424.jpeg',
   }
 ];
 
