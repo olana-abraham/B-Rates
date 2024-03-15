@@ -74,10 +74,12 @@ export default function Profile() {
   
     catch { }
   }
+  
   function searchUser()
   {
     if(otherUser)
     {
+      console.log(otherUser)
       setFirstName(otherUser[0].Name.split(" ")[0])
        setFavoriteDiningHall(otherUser[0].Fav_Dining)
        setLastName(otherUser[0].Name.split(" ")[1])
@@ -85,6 +87,7 @@ export default function Profile() {
        setAbout(otherUser[0].AboutMe)
     }
     otherUser=null;
+    console.log(otherUser)
   }
 useEffect(() => {
   fetchUser();
@@ -98,6 +101,18 @@ useEffect(() => {
     Update()
     setIsEditing(false);
   };
+
+  function Edit({ }) {
+
+    console.log(otherUser);
+    console.log("testing")
+    if (otherUser == null) {
+      console.log("true value test");
+      return(
+      <button className='edit-save' onClick={handleEditClick}>Edit</button>
+      )
+    }
+  }
 
   return (
     <div>
@@ -129,7 +144,7 @@ useEffect(() => {
           <div>
             <h1>{`${firstName} ${lastName}`}</h1>
             <h2>Graduating {gradYear}</h2>
-            <button className='edit-save' onClick={handleEditClick}>Edit</button>
+            <Edit />
           </div>
         )}
       </div>
