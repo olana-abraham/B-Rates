@@ -2,7 +2,6 @@ import { Link, useMatch, useResolvedPath, useLocation } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaSearch } from "react-icons/fa";
 import logo from './b-rate-logo.png';
-import './index.css';
 import React, { useState, useEffect } from 'react';
 import supabase from "./config/supabaseClient"
 import { useNavigate } from "react-router-dom"
@@ -38,27 +37,22 @@ export default function Navbar() {
     }
 
     const fetchUser = async (e) => {
-        try {
-            const { data, error } = await supabase
-                .from('Users')
-                .select()
-                .eq('username', username)
-            if (error) {
-                alert("Could not fetch user's profile")
-                throw error
-
-            }
-            if (data.length == 0) {
-                alert("User does not exist")
-                throw error
-            }
-            if (data) {
-                setotherUser(data)
-                navigate("/Profile", { state: { otherUser: data } })
-            }
+        const {data, error} = await supabase
+            .from('Users')
+            .select()
+            .eq('username', username)
+        if(error)
+        {
+            alert("Could not fetch user's profile")
         }
-        catch {
-            
+        if(data.length==0)
+        {
+            alert("User does not exist")
+        }
+        if(data)
+        {
+            setotherUser(data)
+            navigate("/Profile", { state: { otherUser: data } }) 
         }
     }
 
@@ -105,7 +99,7 @@ export default function Navbar() {
             var location = window.location;
             try {
                 let { error } = await supabase.auth.signOut();
-                location.replace("/");
+                location.reload();
                 if (error) throw error
             } catch (error) {
                 alert(error.message);
@@ -124,7 +118,7 @@ export default function Navbar() {
                 </ul>
             );
         }
-        if (user && !isPasswordReset) {
+        if (user) {
             return (
                 <ul className="mainlinks">
                     <CustomLink to="/" className="home">Home </CustomLink>

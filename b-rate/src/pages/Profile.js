@@ -84,10 +84,14 @@ export default function Profile() {
        setGradYear(otherUser[0].Grad_year)
        setAbout(otherUser[0].AboutMe)
     }
+    otherUser=null;
   }
 useEffect(() => {
   fetchUser();
 }, []);
+useEffect(() => {
+  fetchUser();
+}, [otherUser]);
 
 
   const handleSaveClick = () => {
