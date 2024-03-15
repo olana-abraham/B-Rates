@@ -84,21 +84,22 @@
 }
 
 .wrapper .remember-forgot {
-    display: flex;
-    justify-content: space-between;
+    margin-right: 40px;
+    position: relative;
     color: black;
     font-size: 14.5px;
-    margin: -15px 0 15px;
 }
 
 .remember-forgot label input {
     accent-color: black;
-    margin-right: 4px;
+    position: relative;
+    margin-right: 40px;
 }
 
 .remember-forgot a {
     color: black;
     text-decoration: none;
+    margin-left: 112px;
 }
 
 .remember-forgot a:hover {

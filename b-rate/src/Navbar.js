@@ -28,6 +28,10 @@ export default function Navbar() {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+        if (!user) {
+            alert("Please log in to search")
+            return
+        }
         if(!username)
         {
             alert("Enter a username to search for a user's profile")
@@ -129,6 +133,7 @@ export default function Navbar() {
             );
         }
     }
+
 
     return (
         <nav className="nav">

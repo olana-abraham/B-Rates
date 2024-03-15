@@ -4,7 +4,6 @@ import { FaUser, FaLock } from "react-icons/fa";
 import myImage from './myImage.jpg';
 import { useEffect, useState } from "react"
 import supabase from "../config/supabaseClient.js"
-import { Auth } from '@supabase/auth-ui-react'
 import Navbar from "../Navbar";
 import { Link, useMatch, useResolvedPath, useLocation } from "react-router-dom";
 
@@ -47,7 +46,6 @@ const Login = () => {
                     </div>
 
                     <div className="remember-forgot">
-                        <label><input type="checkbox" />Remember Me </label>
                         <Link to="/forgot" > Forgot Password?</Link>
 
                     </div>
