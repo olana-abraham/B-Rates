@@ -5,7 +5,7 @@ import supabase from "../config/supabaseClient.js"
 
 
 export default function Favorite() {
-  const buttonNamesRow1 = ['Bruin Cafe', 'Cafe Plate', 'Cafe 1919'];
+  const buttonNamesRow1 = ['Bruin Cafe', 'Bruin Plate', 'Cafe 1919'];
   const buttonNamesRow2 = ['De Neve', 'Epicuria', 'Rendezvouz'];
   const buttonNamesRow3 = ['Epicuria at Ackerman', 'Feast at Rieber', 'The Study at Hedrick'];
 

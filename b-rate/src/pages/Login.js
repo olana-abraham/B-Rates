@@ -4,7 +4,6 @@ import { FaUser, FaLock } from "react-icons/fa";
 import myImage from './myImage.jpg';
 import { useEffect, useState } from "react"
 import supabase from "../config/supabaseClient.js"
-import { Auth } from '@supabase/auth-ui-react'
 import Navbar from "../Navbar";
 import { Link, useMatch, useResolvedPath, useLocation } from "react-router-dom";
 
@@ -32,22 +31,21 @@ const Login = () => {
     return (
         <div>
             <Navbar />
-            <div className='wrapper'>
+            <div className='wrapper-login'>
                 <form onSubmit={handleSubmit}>
                     <h1>Welcome Back</h1>
                     <h2>Login to Leave Reviews</h2>
-                    <div className="input-box">
+                    <div className="input-box-login">
                         <input type="text" placeholder='Email' onChange={(e) => setEmail(e.target.value)} required />
                         <FaUser className='icon' />
                     </div>
-                    <div className="input-box">
+                    <div className="input-box-login">
                         <input type="password" placeholder='Password' onChange={(e) => setPass(e.target.value)} required />
                         <FaLock className='icon' />
 
                     </div>
 
                     <div className="remember-forgot">
-                        <label><input type="checkbox" />Remember Me </label>
                         <Link to="/forgot" > Forgot Password?</Link>
 
                     </div>
@@ -62,6 +60,8 @@ const Login = () => {
                     <img src={myImage} alt="My Image" className='loginimage' />
                 </div>
             </div>
+
+            
         </div>
 
 
