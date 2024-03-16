@@ -33,10 +33,10 @@ export default function Forgot() {
     return (
         <div>
             <Navbar />
-            <div className='wrapper'>
+            <div className='wrapper-forgot'>
                 <form onSubmit={handleSubmit}>
                     <h1>Forgot Password</h1>
-                    <div className="input-box">
+                    <div className="input-box-forgot">
                         <input type="text" placeholder='Email' value={email}
                             onChange={(e) => setEmail(e.target.value)} required />
                         <MdEmail className='icon' />
@@ -46,7 +46,7 @@ export default function Forgot() {
                 </form>
 
 
-                <img src={myImage} alt="My Image" className='image' />
+                <img src={myImage} alt="My Image" className='image-forgot' />
 
             </div>
         </div>

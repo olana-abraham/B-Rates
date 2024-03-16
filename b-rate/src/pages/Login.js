@@ -31,15 +31,15 @@ const Login = () => {
     return (
         <div>
             <Navbar />
-            <div className='wrapper'>
+            <div className='wrapper-login'>
                 <form onSubmit={handleSubmit}>
                     <h1>Welcome Back</h1>
                     <h2>Login to Leave Reviews</h2>
-                    <div className="input-box">
+                    <div className="input-box-login">
                         <input type="text" placeholder='Email' onChange={(e) => setEmail(e.target.value)} required />
                         <FaUser className='icon' />
                     </div>
-                    <div className="input-box">
+                    <div className="input-box-login">
                         <input type="password" placeholder='Password' onChange={(e) => setPass(e.target.value)} required />
                         <FaLock className='icon' />
 
@@ -60,6 +60,8 @@ const Login = () => {
                     <img src={myImage} alt="My Image" className='loginimage' />
                 </div>
             </div>
+
+            
         </div>
 
 

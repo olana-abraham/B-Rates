@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom';
 import { FaUser, FaLock } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Navbar from "../Navbar";
+import Footer from "./Footer";
+
 
 
 const Register = () => {
@@ -46,24 +48,24 @@ const Register = () => {
         <div>
 
             <Navbar />
-            <div className='wrapperregister'>
+            <div className='wrapper-register'>
                 <form onSubmit={handleSubmit}>
                     <h1>Register</h1>
-                    <div className="input-box">
+                    <div className="input-box-register">
                         <input type="text" placeholder='Username' onChange={(e) => setUsername(e.target.value)} required />
                         <FaUser className='icon' />
                     </div>
-                    <div className="input-box">
+                    <div className="input-box-register">
                         <input type="text" placeholder='Email'
                             onChange={(e) => setEmail(e.target.value)} required />
                         <MdEmail className='icon' />
                     </div>
-                    <div className="input-box">
+                    <div className="input-box-register">
                         <input type="password" placeholder='Create Password'
                             onChange={(e) => setPass1(e.target.value)} required />
                         <FaLock className='icon' />
                     </div>
-                    <div className="input-box">
+                    <div className="input-box-register">
                         <input type="password" placeholder='Confirm Password'
                             onChange={(e) => setPass2(e.target.value)} required />
                         <FaLock className='icon' />
@@ -76,7 +78,7 @@ const Register = () => {
                 </form>
                 <div >
 
-                    <img src={myImage} alt="My Image" className='imageregister' />
+                    <img src={myImage} alt="My Image" className='image-register' />
                 </div>
             </div>
         </div>

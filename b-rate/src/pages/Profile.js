@@ -1,5 +1,6 @@
 import React from 'react'
 import './Profile.css'
+import Footer from "./Footer";
 import Navbar from "../Navbar"
 import { useLocation } from 'react-router-dom';
 import supabase from "../config/supabaseClient.js"
@@ -177,6 +178,7 @@ useEffect(() => {
           )}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

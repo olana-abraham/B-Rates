@@ -237,6 +237,7 @@ const Reviews = () => {
 </div>
 )}
 
+<Footer/>
 
   </div>
 
