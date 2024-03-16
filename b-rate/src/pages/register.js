@@ -1,6 +1,5 @@
 import React from 'react';
 import './Register.css';
-import Navbar from '../Navbar.js';
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import supabase from "../config/supabaseClient.js"
@@ -8,6 +7,10 @@ import myImage from './myImage.jpg';
 import { Link } from 'react-router-dom';
 import { FaUser, FaLock } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import Navbar from "../Navbar";
+import Footer from "./Footer";
+
+
 
 const Register = () => {
     const [email, setEmail] = useState('')
@@ -28,59 +31,56 @@ const Register = () => {
                 options: {
                     data: { username: username },
                     emailRedirectTo: "http://localhost:3000/account_info_1",
-                },
-
+                }
             })
             if (error) throw error
             alert("Check your email for verification link")
+            //logged = true;
         }
         catch (error) {
             alert(error)
         }
-
-        const handleSubmit = async (e) => {
-            e.preventDefault()
-            navigate("/Account_Info_1", { state: { username: username, email:email, password:pass1 } }) 
-        }
     }
+
+
 
     return (
         <div>
 
-        <Navbar />
-        <div className='wrapperregister'>
-            <form onSubmit={handleSubmit}>
-                <h1>Register</h1>
-                <div className="input-box">
-                    <input type="text" placeholder='Username' onChange={(e) => setUsername(e.target.value)} required />
-                     <FaUser className='icon' />
-                </div>
-                <div className="input-box">
-                    <input type="text" placeholder='Email'
-                        onChange={(e) => setEmail(e.target.value)} required />
-                        <MdEmail className='icon'/>
-                </div>
-                <div className="input-box">
-                    <input type="password" placeholder='Create Password' 
-                        onChange={(e) => setPass1(e.target.value)} required />
+            <Navbar />
+            <div className='wrapper-register'>
+                <form onSubmit={handleSubmit}>
+                    <h1>Register</h1>
+                    <div className="input-box-register">
+                        <input type="text" placeholder='Username' onChange={(e) => setUsername(e.target.value)} required />
+                        <FaUser className='icon' />
+                    </div>
+                    <div className="input-box-register">
+                        <input type="text" placeholder='Email'
+                            onChange={(e) => setEmail(e.target.value)} required />
+                        <MdEmail className='icon' />
+                    </div>
+                    <div className="input-box-register">
+                        <input type="password" placeholder='Create Password'
+                            onChange={(e) => setPass1(e.target.value)} required />
                         <FaLock className='icon' />
                     </div>
-                    <div className="input-box">
+                    <div className="input-box-register">
                         <input type="password" placeholder='Confirm Password'
                             onChange={(e) => setPass2(e.target.value)} required />
                         <FaLock className='icon' />
                     </div>
 
-                {/*If we want to link the register button to the survey, then uncomment the link portion of code*/}
-                
-                {/*<Link to="/account_info_1" >*/}<button type="submit" onClick={handleSubmit}>Register</button>{/*</Link>*/}
-           
-            </form>
-            <div >
+                    {/*If we want to link the register button to the survey, then uncomment the link portion of code*/}
 
-            <img src={myImage} alt="My Image" className='imageregister' />
+                    {/*<Link to="/account_info_1" >*/}<button type="submit"  onclick={handleSubmit}>Register</button>{/*</Link>*/}
+
+                </form>
+                <div >
+
+                    <img src={myImage} alt="My Image" className='image-register' />
+                </div>
             </div>
-        </div>
         </div>
     )
 }

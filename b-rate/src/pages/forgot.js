@@ -7,6 +7,8 @@ import myImage from './myImage.jpg';
 import Navbar from "../Navbar";
 import { useNavigate } from "react-router-dom"
 import { Link } from 'react-router-dom';
+import Footer from "./Footer";
+
 import supabase from "../config/supabaseClient.js"; // Import your Supabase client
 
 
@@ -19,7 +21,7 @@ export default function Forgot() {
         e.preventDefault();
         try {
             let { data, error } = await supabase.auth.resetPasswordForEmail(email, {
-                emailRedirectTo: "http://localhost:3000/password_reset",
+                redirectTo: "http://localhost:3000/password_reset",
             });
             if (error) throw error
             alert('Password reset email sent. Please check your inbox.');
@@ -28,24 +30,24 @@ export default function Forgot() {
         }
     }
 
-    return(
+    return (
         <div>
             <Navbar />
-            <div className='wrapper'>
+            <div className='wrapper-forgot'>
                 <form onSubmit={handleSubmit}>
                     <h1>Forgot Password</h1>
-                    <div className="input-box">
+                    <div className="input-box-forgot">
                         <input type="text" placeholder='Email' value={email}
-                            onChange={(e) => setEmail(e.target.value)}required />
-                        <MdEmail className='icon'/>
+                            onChange={(e) => setEmail(e.target.value)} required />
+                        <MdEmail className='icon' />
                     </div>
-    
+
                     <button type="submit" >Send</button>
                 </form>
-                <div >
 
-            <img src={myImage} alt="My Image" className='image' />
-                </div>  
+
+                <img src={myImage} alt="My Image" className='image-forgot' />
+
             </div>
         </div>
 

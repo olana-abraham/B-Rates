@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './login.css';
+import './password_reset.css';
 import { FaUser, FaLock } from "react-icons/fa";
 import myImage from './myImage.jpg';
 import Navbar from '../Navbar.js';
@@ -23,7 +23,8 @@ export default function PasswordReset() {
             })
             if (error) throw error
             alert("Password changed successfully!");
-            navigate('/'); // Redirect to home page after successful password change
+            var location = window.location();
+            location.replace('/'); // Redirect to home page after successful password change
         } catch (error) {
             alert(error)
         }
@@ -32,14 +33,14 @@ export default function PasswordReset() {
     return (
         <div>
             <Navbar />
-            <div className='wrapper'>
+            <div className='wrapper-reset'>
                 <form onSubmit={handleSubmit}>
                     <h1>Reset Password</h1>
-                    <div className="input-box">
+                    <div className="input-box-reset">
                         <input type="password" placeholder='New Password' onChange={(e) => setNewPassword(e.target.value)} required />
                         <FaLock className='icon' />
                     </div>
-                    <div className="input-box">
+                    <div className="input-box-reset">
                     <input type="password" placeholder='Confirm Password'
                         onChange={(e) => setPass2(e.target.value)} required />
                         <FaLock className='icon' />
@@ -47,7 +48,7 @@ export default function PasswordReset() {
                     <button type="submit">Reset</button>
                 </form>
                 <div>
-                    <img src={myImage} alt="My Image" className='image' />
+                    <img src={myImage} alt="My Image" className='image-reset' />
                 </div>
             </div>
         </div>

@@ -1,53 +1,119 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Profile.css'
+import Footer from "./Footer";
 import Navbar from "../Navbar"
 import { useLocation } from 'react-router-dom';
+import supabase from "../config/supabaseClient.js"
+import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 
-
-
-    
-
-//     return(
-//         <div> 
-//             <Navbar />
-//             { otherUser && (
-//         <div>
-//         {otherUser.map((user) => (
-//           <textarea
-//             value={`${user.Name}`}
-           
-//             // Add created_at if needed
-//             rows={50} // Set the number of rows as per your requirement
-//             cols={50} // Set the number of columns as per your requirement
-//             readOnly // Make the textarea read-only
-//           />
-//         ))}
-//       </div>
-//       )}
-            
-
-// The backend should update the following fields: firstName, lastName, gradYear, favoriteDiningHall, about
-
+let { data: { user } } = await supabase.auth.getUser()
+ function findUser() {
+  try {
+    console.log(user.id)
+    return true
+  }
+  catch {
+    alert("Must be logged in to edit profile.")
+    return false
+  }
+}
 export default function Profile() {
   const [isEditing, setIsEditing] = useState(false);
-  const [firstName, setFirstName] = useState('Tre');
-  const [lastName, setLastName] = useState('Bradshaw');
-  const [gradYear, setGradYear] = useState('2026');
-  const [favoriteDiningHall, setFavoriteDiningHall] = useState('De Neve');
-  const [about, setAbout] = useState('My name is Tre and I got a basketball game tomorrow.');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [gradYear, setGradYear] = useState('');
+  const [favoriteDiningHall, setFavoriteDiningHall] = useState('');
+  const [about, setAbout] = useState('');
   const location = useLocation();
   const otherUser = location.state && location.state.otherUser;
     
+  
+
+  async function Update() {
+    let { data: { user } } = await supabase.auth.getUser()
+    try {
+      const { data, error } = await supabase
+        .from('Users')
+        .update([
+          { Fav_Dining: favoriteDiningHall, Name: firstName + " " + lastName, Grad_year: gradYear, AboutMe: about },
+        ])
+        .eq('UID', user.id)
+    }
+    catch { }
+  }
 
   const handleEditClick = () => {
-    setIsEditing(true);
+    let edit = findUser();
+    setIsEditing(edit);
+    console.log(edit)
   };
+  
+  const fetchUser = async () => {
+    try {
+      const { data: { user } } = await supabase.auth.getUser()
+      const { data, error } = await supabase
+        .from('Users')
+        .select()
+        .eq('UID', user.id);
+
+      if (error) {
+        console.error('Error fetching user:', error.message);
+      }
+      if (otherUser) searchUser();
+      if (!otherUser && data) {
+        setFirstName(data[0].Name.split(" ")[0])
+        setFavoriteDiningHall(data[0].Fav_Dining)
+        setLastName(data[0].Name.split(" ")[1])
+        setGradYear(data[0].Grad_year)
+        setAbout(data[0].AboutMe)
+      } else {
+        console.log('User not found.');
+      }
+    
+    }
+  
+    catch { }
+  }
+  
+  function searchUser()
+  {
+    if(otherUser)
+    {
+      console.log(otherUser)
+      setFirstName(otherUser[0].Name.split(" ")[0])
+       setFavoriteDiningHall(otherUser[0].Fav_Dining)
+       setLastName(otherUser[0].Name.split(" ")[1])
+       setGradYear(otherUser[0].Grad_year)
+       setAbout(otherUser[0].AboutMe)
+    }
+    otherUser=null;
+    console.log(otherUser)
+  }
+useEffect(() => {
+  fetchUser();
+}, []);
+useEffect(() => {
+  fetchUser();
+}, [otherUser]);
 
 
   const handleSaveClick = () => {
-    // The tutorial was saying to send an API request to save the changes to our backend
+    Update()
     setIsEditing(false);
   };
+
+  function Edit({ }) {
+
+    console.log(otherUser);
+    console.log("testing")
+    if (otherUser == null) {
+      console.log("true value test");
+      return(
+      <button className='edit-save' onClick={handleEditClick}>Edit</button>
+      )
+    }
+  }
 
   return (
     <div>
@@ -79,7 +145,7 @@ export default function Profile() {
           <div>
             <h1>{`${firstName} ${lastName}`}</h1>
             <h2>Graduating {gradYear}</h2>
-            <button className='edit-save' onClick={handleEditClick}>Edit</button>
+            <Edit />
           </div>
         )}
       </div>
@@ -112,6 +178,7 @@ export default function Profile() {
           )}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

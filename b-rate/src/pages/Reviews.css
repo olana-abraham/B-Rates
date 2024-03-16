@@ -51,9 +51,18 @@
   
   }
 
+  .textarea1{
+border-width: .5px;
+  border-color: black;
+  border-radius: 10px;
+  font-family: 'Raleway', sans-serif;
+  margin-left: 10px;
+
+  }
+
   .reviewoutput{
   
-    background-color: rgb(241, 241, 241);
+    background-color: rgba(191, 238, 243, 0.276);
     border-radius: 5px;
     border-width: 1px;
     border-color: black;

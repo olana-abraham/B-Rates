@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import Footer from "./Footer";
 import './Reviews.css'
 import { FaStar } from "react-icons/fa"
+import React from 'react'
 
 
 //Backend below
@@ -24,14 +25,34 @@ const Reviews = () => {
   const [otherUID, setotherUID] = useState('')
   const [ratingShown, setratingShown] = useState('')
   const [ordering, setOrdering] = useState(true)
+  const [reviewSearch, setReviewSearch] = useState('')
 
   const fetchReviews = async () => {
-    if (ratingShown == "-1" || ratingShown == '') {
+    if(Dining=='')
+    {
+      const { data, error } = await supabase
+        .from('Reviews_v2')
+        .select(
+      )
+        .ilike('Review', `%${reviewSearch}%`)
+        .order('created_at', { ascending: ordering });
+      if (error) {
+        setFetchError('Could not fetch the reviews')
+        setReviews(null)
+        console.log(error)
+      }
+      if (data) {
+        setReviews(data)
+        setFetchError("")
+      }
+    }
+    else if (ratingShown == "-1" || ratingShown == '') {
       const { data, error } = await supabase
         .from('Reviews_v2')
         .select(
       )
         .eq('Dining', Dining)
+        .ilike('Review', `%${reviewSearch}%`)
         .order('created_at', { ascending: ordering });
       if (error) {
         setFetchError('Could not fetch the reviews')
@@ -50,6 +71,7 @@ const Reviews = () => {
       )
         .eq('Dining', Dining)
         .eq('rating', ratingShown)
+        .ilike('Review', `%${reviewSearch}%`)
         .order('created_at', { ascending: ordering });
 
       if (error) {
@@ -64,12 +86,11 @@ const Reviews = () => {
     }
 
   }
-
-
+ 
 
   useEffect(() => {
     fetchReviews();
-  }, [Dining, ratingShown, ordering]);
+  }, [Dining, ratingShown, ordering, reviewSearch]);
 
 
   const handleSelectChange = async (event) => {
@@ -157,9 +178,6 @@ const Reviews = () => {
       <Navbar />
       <div className='reviewsside'>
         <div className="page create">
-
-
-
           <select id="Foodspots" onChange={handleSelectChange} className="select-container">
             <option value=''>Select Dining</option>
 
@@ -187,11 +205,20 @@ const Reviews = () => {
           <option value="oldesttop">Oldest to Newest</option>
           <option value="newesttop">Newest to Oldest</option>
         </select>
-
+        <textarea
+          className="textarea1"
+          //id="Review"
+          value = {reviewSearch}
+          placeholder='Search for reviews'
+          onChange={(e) => setReviewSearch(e.target.value)}
+          rows={1}
+          cols={30}
+        />
       <form onSubmit={handleSubmit}>
       <label htmlFor="review" className="reviewtag">REVIEWS</label>
         <textarea
           className="textarea"
+          placeholder="type review..."
           id="Review"
           value = {Review}
           onChange={(e) => setReview(e.target.value)}
@@ -209,15 +236,14 @@ const Reviews = () => {
             {
             }
 
-            {formError && <p className="error">{formError}</p>}
-          </form>
-
-          {fetchError && (<p>{fetchError}</p>)}
-
-
-
-
-          { }
+        {formError && <p className="error">{formError}</p>}
+      </form>
+      
+      {fetchError && (<p>{fetchError}</p>)}
+  
+     
+      
+      {}
 
         </div>
 
@@ -229,34 +255,23 @@ const Reviews = () => {
     className="reviewoutput"
       key={index}
       value={`${review.Name} ${review.created_at ? review.created_at.substring(0, 10) + ' ' + review.created_at.substring(11, 16) : ''} \nRating: ${review.rating || ''} \n${review.Review || ''}`}
-     
       rows={6} 
       cols={80} 
       readOnly 
     />
+
+
+
   ))}
 </div>
 )}
 
+        <Footer />
 
   </div>
 
-
-
-
-
-
-
-
   )
 }
-
-
-
-
-
-
-
 
 
 //Star rating system

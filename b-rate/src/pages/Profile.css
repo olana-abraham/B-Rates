@@ -1,19 +1,19 @@
 :root {
-    --text1: hsl(150 100% 8%);
-    --text2: hsl(150 10% 60%);
-    --bkg1: hsl(189, 100%, 92%);
-    --bkg2: hsl(0, 0%, 100%);
-    --accent2: #1295cd;
-    --accent1: hsla(180, 92%, 58%, 0.6);
-    --gradient: linear-gradient(to right, var(--accent1), var(--accent2));
-  }
+  --text1: hsl(150 100% 8%);
+  --text2: hsl(150 10% 60%);
+  --bkg1: hsl(189, 100%, 92%);
+  --bkg2: hsl(0, 0%, 100%);
+  --accent2: #1295cd;
+  --accent1: hsla(180, 92%, 58%, 0.6);
+  --gradient: linear-gradient(to right, var(--accent1), var(--accent2));
+}
 
-  .name-year { 
-    text-align: left;
-    font-family: 'Raleway', sans-serif;
-    margin-left: 100px;
-    margin-top: 50px;
-  }
+.name-year {
+  text-align: left;
+  font-family: 'Raleway', sans-serif;
+  margin-left: 100px;
+  margin-top: 50px;
+}
 
   .profile-container {
     font-family: 'Raleway', sans-serif;
@@ -41,25 +41,25 @@
     opacity: .5;
   }
 
-  .review-header {
-    display: grid;
-    gap: 2rem;
-    margin-bottom: 2rem;
-    padding: 2rem 2rem 0;
-  }
-  
-  .review-header h2 {
-    font-size: clamp(1.3rem, 0.34545462rem + 4.363636vw, 2.8rem);
-    z-index: 0;
-    margin: auto;
-  }
-  
-  .edit-save {
-    background-color: #1295cd;
-    padding-top: 4px;
-    padding-bottom: 3px;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+.review-header {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding: 2rem 2rem 0;
+}
+
+.review-header h2 {
+  font-size: clamp(1.3rem, 0.34545462rem + 4.363636vw, 2.8rem);
+  z-index: 0;
+  margin: auto;
+}
+
+.edit-save {
+  background-color: #1295cd;
+  padding-top: 4px;
+  padding-bottom: 3px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
