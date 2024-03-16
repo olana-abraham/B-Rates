@@ -122,7 +122,7 @@ export default function Navbar() {
                 </ul>
             );
         }
-        if (user) {
+        if (user && !isPasswordReset) {
             return (
                 <ul className="mainlinks">
                     <CustomLink to="/" className="home">Home </CustomLink>
