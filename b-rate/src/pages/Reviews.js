@@ -179,7 +179,7 @@ const Reviews = () => {
       <div className='reviewsside'>
         <div className="page create">
           <select id="Foodspots" onChange={handleSelectChange} className="select-container">
-            <option value=''>All Reviews</option>
+            <option value=''>Select Dining</option>
 
             <option value="Epicuria">Epicuria</option>
             <option value="Feast">Feast</option>
@@ -218,6 +218,7 @@ const Reviews = () => {
       <label htmlFor="review" className="reviewtag">REVIEWS</label>
         <textarea
           className="textarea"
+          placeholder="type review..."
           id="Review"
           value = {Review}
           onChange={(e) => setReview(e.target.value)}
@@ -265,6 +266,7 @@ const Reviews = () => {
 </div>
 )}
 
+        <Footer />
 
   </div>
 

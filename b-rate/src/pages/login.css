@@ -91,6 +91,7 @@
 .remember-forgot a {
         color: black;
         text-decoration: none;
+        margin-left: 110px;
 }
 
 .remember-forgot a:hover {
