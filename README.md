@@ -32,18 +32,12 @@ Clone the Repository:
 
 ##### `cd b-rate`
 
-Open the .env file in the config folder. Add the following code:
+Create a file and title it ".env". Add the following code:
 
 ```
-import { createClient } from '@supabase/supabase-js'
+REACT_APP_SUPABASE_URL=https://pesdletvaxtkoowjvwtg.supabase.co
+REACT_APP_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBlc2RsZXR2YXh0a29vd2p2d3RnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDc0NTI4NDAsImV4cCI6MjAyMzAyODg0MH0.2GLMCgEQRBJfzBgMKC-AZEsaciYtpxs_KPS3K9_i18w
 
-const supabaseUrl = process.env.REACT_APP_SUPABASE_URL
-
-const supabaseKey = process.env.REACT_APP_ANON_KEY
-
-const supabase = createClient(supabaseUrl, supabaseKey)
-
-export default supabase
 ```
 
 ##### `npm install`
